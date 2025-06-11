@@ -1,6 +1,5 @@
 "use client"
 
-import type React from "react"
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Mail, Phone, MapPin, Send, Loader2, User, MessageSquare } from "lucide-react"
@@ -18,14 +17,34 @@ export default function Contact() {
   }>({ type: null, message: "" })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value,
+    }))
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    
+    // Validate form before submission
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      setSubmitStatus({
+        type: "error",
+        message: "Please fill in all required fields.",
+      })
+      return
+    }
+
+    // Basic email validation
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      setSubmitStatus({
+        type: "error",
+        message: "Please enter a valid email address.",
+      })
+      return
+    }
+
     setIsSubmitting(true)
     setSubmitStatus({ type: null, message: "" })
 
@@ -35,22 +54,29 @@ export default function Contact() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          message: formData.message.trim(),
+        }),
       })
 
-      if (response.ok) {
-        setSubmitStatus({
-          type: "success",
-          message: "Thank you for your message! I'll get back to you soon.",
-        })
-        setFormData({ name: "", email: "", message: "" })
-      } else {
-        throw new Error("Failed to send message")
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to send message")
       }
+
+      setSubmitStatus({
+        type: "success",
+        message: "Thank you for your message! I'll get back to you soon.",
+      })
+      setFormData({ name: "", email: "", message: "" })
     } catch (error) {
+      console.error("Submission error:", error)
       setSubmitStatus({
         type: "error",
-        message: "Sorry, there was an error sending your message. Please try again.",
+        message: error instanceof Error ? error.message : "Sorry, there was an error sending your message. Please try again.",
       })
     } finally {
       setIsSubmitting(false)
@@ -63,6 +89,7 @@ export default function Contact() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className="py-12 sm:py-16 lg:py-20 px-4"
+      id="contact"
     >
       <div className="max-w-6xl mx-auto">
         <motion.div
@@ -118,7 +145,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-100">Phone</p>
-                    <a href="tel:+639123456789" className="text-green-400 hover:text-green-300 transition-colors">
+                    <a href="tel:+639944105573" className="text-green-400 hover:text-green-300 transition-colors">
                       +63 9944105573
                     </a>
                   </div>
@@ -195,6 +222,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
+                  minLength={2}
                   className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-100 placeholder-gray-400"
                   placeholder="Your full name"
                 />
@@ -228,6 +256,7 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   required
+                  minLength={10}
                   rows={6}
                   className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-vertical text-gray-100 placeholder-gray-400"
                   placeholder="Tell me about your project or just say hello..."
