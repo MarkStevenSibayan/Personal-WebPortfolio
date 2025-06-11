@@ -1,39 +1,27 @@
 import { NextResponse } from "next/server"
-import nodemailer from "nodemailer"
-//correct
+import sgMail from "@sendgrid/mail"
+
 export async function POST(req: Request) {
   // Validate environment variables
-  if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
-    return NextResponse.json(
-      { error: "Email configuration is missing" },
-      { status: 500 }
-    )
+  if (!process.env.SENDGRID_API_KEY) {
+    return NextResponse.json({ error: "Email configuration is missing" }, { status: 500 })
   }
 
   try {
     // Validate request body
     const { name, email, message } = await req.json()
     if (!name || !email || !message) {
-      return NextResponse.json(
-        { error: "Missing required fields" },
-        { status: 400 }
-      )
+      return NextResponse.json({ error: "Missing required fields" }, { status: 400 })
     }
 
-    // Email transporter configuration
-    const transporter = nodemailer.createTransport({
-      service: "markstevensibayan11@gmail", // Changed from your email address to 'gmail'
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    })
+    // Set SendGrid API key
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
     // Email content
-    const mailOptions = {
-      from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
+    const msg = {
       to: "markstevensibayan11@gmail.com",
-      replyTo: email, // So you can reply directly to the sender
+      from: "markstevensibayan11@gmail.com", // Must be verified in SendGrid
+      replyTo: email,
       subject: `Portfolio Contact: ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -57,17 +45,10 @@ export async function POST(req: Request) {
     }
 
     // Send email
-    await transporter.sendMail(mailOptions)
-    return NextResponse.json(
-      { message: "Email sent successfully" },
-      { status: 200 }
-    )
-
+    await sgMail.send(msg)
+    return NextResponse.json({ message: "Email sent successfully" }, { status: 200 })
   } catch (error) {
     console.error("Error sending email:", error)
-    return NextResponse.json(
-      { error: "Failed to send email. Please try again later." },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: "Failed to send email. Please try again later." }, { status: 500 })
   }
 }
