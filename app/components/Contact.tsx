@@ -133,10 +133,17 @@ export default function Contact() {
       setFormData({ name: "", email: "", message: "" })
     } catch (error) {
       console.error("Submission error:", error)
+
+      let errorMessage = "Sorry, there was an error sending your message. Please try again."
+
+      if (error instanceof Error) {
+        // Show the actual error message from the API
+        errorMessage = error.message
+      }
+
       setSubmitStatus({
         type: "error",
-        message:
-          error instanceof Error ? error.message : "Sorry, there was an error sending your message. Please try again.",
+        message: errorMessage,
       })
     } finally {
       setIsSubmitting(false)
