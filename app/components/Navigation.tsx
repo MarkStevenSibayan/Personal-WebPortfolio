@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Home, Code, Menu, X, Briefcase } from "lucide-react"
+import { Home, Code, Menu, X, Briefcase, Mail } from "lucide-react"
 import { Code2 } from "lucide-react"
 import { useState } from "react"
 
@@ -15,6 +15,7 @@ export default function Navigation() {
     { href: "/projects", label: "Projects", icon: Briefcase },
     { href: "/skills", label: "Skills", icon: Code },
     { href: "/resume", label: "Resume", icon: Code2 },
+    { href: "/contact", label: "Contact", icon: Mail },
   ]
 
   return (
