@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Mail, Phone, MapPin, Send, Loader2, User, MessageSquare } from "lucide-react"
-
+//correct
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",

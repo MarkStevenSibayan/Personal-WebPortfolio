@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 import nodemailer from "nodemailer"
-
+//correct
 export async function POST(req: Request) {
   // Validate environment variables
   if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {

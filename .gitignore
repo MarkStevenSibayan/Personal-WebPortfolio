@@ -26,6 +26,11 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+<<<<<<< HEAD
 
 EMAIL_USER=markstevensibayan11@gmail.com
 EMAIL_PASS=njrw lknb hcns lktm
+=======
+EMAIL_USER=markstevensibayan11@gmail.com
+EMAIL_PASS=njrw lknb hcns lktm
+>>>>>>> 689ded0b11e91a537ca98b9a7c30221801430264
