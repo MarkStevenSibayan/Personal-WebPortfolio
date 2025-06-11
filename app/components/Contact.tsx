@@ -1,8 +1,10 @@
 "use client"
 
+import type React from "react"
+
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Mail, Phone, MapPin, Send, Loader2, User, MessageSquare } from "lucide-react"
+import { Mail, Phone, MapPin, Send, Loader2, User, MessageSquare, AlertCircle } from "lucide-react"
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -12,13 +14,13 @@ export default function Contact() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<{
-    type: "success" | "error" | null
+    type: "success" | "error" | "preview" | null
     message: string
   }>({ type: null, message: "" })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       [name]: value,
     }))
@@ -26,7 +28,7 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     // Validate form before submission
     if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
       setSubmitStatus({
@@ -67,16 +69,26 @@ export default function Contact() {
         throw new Error(data.error || "Failed to send message")
       }
 
-      setSubmitStatus({
-        type: "success",
-        message: "Thank you for your message! I'll get back to you soon.",
-      })
+      // Check if this is a preview environment response
+      if (data.previewError) {
+        setSubmitStatus({
+          type: "preview",
+          message: data.message || "Message received! (Email delivery is disabled in preview mode)",
+        })
+      } else {
+        setSubmitStatus({
+          type: "success",
+          message: "Thank you for your message! I'll get back to you soon.",
+        })
+      }
+
       setFormData({ name: "", email: "", message: "" })
     } catch (error) {
       console.error("Submission error:", error)
       setSubmitStatus({
         type: "error",
-        message: error instanceof Error ? error.message : "Sorry, there was an error sending your message. Please try again.",
+        message:
+          error instanceof Error ? error.message : "Sorry, there was an error sending your message. Please try again.",
       })
     } finally {
       setIsSubmitting(false)
@@ -202,9 +214,19 @@ export default function Contact() {
                 className={`mb-6 p-4 rounded-lg border ${
                   submitStatus.type === "success"
                     ? "bg-green-500/10 text-green-400 border-green-500/20"
-                    : "bg-red-500/10 text-red-400 border-red-500/20"
+                    : submitStatus.type === "preview"
+                      ? "bg-blue-500/10 text-blue-400 border-blue-500/20"
+                      : "bg-red-500/10 text-red-400 border-red-500/20"
                 }`}
               >
+                {submitStatus.type === "preview" && (
+                  <div className="flex items-start mb-2">
+                    <AlertCircle className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">
+                      You're viewing this site in preview mode. Email delivery is simulated.
+                    </span>
+                  </div>
+                )}
                 {submitStatus.message}
               </motion.div>
             )}
