@@ -1,9 +1,11 @@
 "use client"
 
+import type React from "react"
+
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Mail, Phone, MapPin, Send, Loader2, User, MessageSquare } from "lucide-react"
-//correct
+import { Mail, Phone, MapPin, Send, Loader2, User, MessageSquare, CheckCircle, AlertCircle, Info } from "lucide-react"
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -12,13 +14,13 @@ export default function Contact() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<{
-    type: "success" | "error" | null
+    type: "success" | "error" | "demo" | null
     message: string
   }>({ type: null, message: "" })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       [name]: value,
     }))
@@ -26,7 +28,10 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
+    // Clear previous status
+    setSubmitStatus({ type: null, message: "" })
+
     // Validate form before submission
     if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
       setSubmitStatus({
@@ -45,10 +50,28 @@ export default function Contact() {
       return
     }
 
+    // Length validation
+    if (formData.name.trim().length < 2) {
+      setSubmitStatus({
+        type: "error",
+        message: "Name must be at least 2 characters long.",
+      })
+      return
+    }
+
+    if (formData.message.trim().length < 10) {
+      setSubmitStatus({
+        type: "error",
+        message: "Message must be at least 10 characters long.",
+      })
+      return
+    }
+
     setIsSubmitting(true)
-    setSubmitStatus({ type: null, message: "" })
 
     try {
+      console.log("Submitting contact form...")
+
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -61,22 +84,59 @@ export default function Contact() {
         }),
       })
 
-      const data = await response.json()
+      console.log("Response status:", response.status)
 
+      // Check if response is ok
       if (!response.ok) {
-        throw new Error(data.error || "Failed to send message")
+        // Try to get error message from response
+        let errorMessage = "Failed to send message"
+        try {
+          const errorData = await response.json()
+          errorMessage = errorData.error || errorMessage
+        } catch (jsonError) {
+          // If JSON parsing fails, get text response
+          try {
+            const textResponse = await response.text()
+            console.error("Non-JSON error response:", textResponse)
+            errorMessage = `Server error (${response.status})`
+          } catch (textError) {
+            console.error("Failed to read error response:", textError)
+          }
+        }
+        throw new Error(errorMessage)
       }
 
-      setSubmitStatus({
-        type: "success",
-        message: "Thank you for your message! I'll get back to you soon.",
-      })
+      // Parse successful response
+      let data
+      try {
+        data = await response.json()
+      } catch (jsonError) {
+        console.error("Failed to parse success response:", jsonError)
+        throw new Error("Invalid response from server")
+      }
+
+      console.log("Success response:", data)
+
+      // Check if this is demo mode
+      if (data.demo) {
+        setSubmitStatus({
+          type: "demo",
+          message: "Form submitted successfully! (Demo mode - set up RESEND_API_KEY for actual email sending)",
+        })
+      } else {
+        setSubmitStatus({
+          type: "success",
+          message: "Thank you for your message! I'll get back to you soon.",
+        })
+      }
+
       setFormData({ name: "", email: "", message: "" })
     } catch (error) {
       console.error("Submission error:", error)
       setSubmitStatus({
         type: "error",
-        message: error instanceof Error ? error.message : "Sorry, there was an error sending your message. Please try again.",
+        message:
+          error instanceof Error ? error.message : "Sorry, there was an error sending your message. Please try again.",
       })
     } finally {
       setIsSubmitting(false)
@@ -199,13 +259,22 @@ export default function Contact() {
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className={`mb-6 p-4 rounded-lg border ${
+                className={`mb-6 p-4 rounded-lg border flex items-start ${
                   submitStatus.type === "success"
                     ? "bg-green-500/10 text-green-400 border-green-500/20"
-                    : "bg-red-500/10 text-red-400 border-red-500/20"
+                    : submitStatus.type === "demo"
+                      ? "bg-blue-500/10 text-blue-400 border-blue-500/20"
+                      : "bg-red-500/10 text-red-400 border-red-500/20"
                 }`}
               >
-                {submitStatus.message}
+                {submitStatus.type === "success" ? (
+                  <CheckCircle className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
+                ) : submitStatus.type === "demo" ? (
+                  <Info className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
+                ) : (
+                  <AlertCircle className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
+                )}
+                <span>{submitStatus.message}</span>
               </motion.div>
             )}
 
@@ -223,6 +292,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   minLength={2}
+                  maxLength={100}
                   className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-100 placeholder-gray-400"
                   placeholder="Your full name"
                 />
@@ -240,6 +310,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
+                  maxLength={100}
                   className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-100 placeholder-gray-400"
                   placeholder="your.email@example.com"
                 />
@@ -257,6 +328,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   minLength={10}
+                  maxLength={1000}
                   rows={6}
                   className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-vertical text-gray-100 placeholder-gray-400"
                   placeholder="Tell me about your project or just say hello..."
