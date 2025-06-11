@@ -119,7 +119,7 @@ export default function Contact() {
                   <div>
                     <p className="font-semibold text-gray-100">Phone</p>
                     <a href="tel:+639123456789" className="text-green-400 hover:text-green-300 transition-colors">
-                      +63 912 345 6789
+                      +63 9944105573
                     </a>
                   </div>
                 </motion.div>
@@ -133,7 +133,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-100">Location</p>
-                    <p className="text-gray-300">Philippines</p>
+                    <p className="text-gray-300">Valenzuela City, NCR, Philippines</p>
                   </div>
                 </motion.div>
               </div>
