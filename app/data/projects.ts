@@ -14,7 +14,7 @@ export const projects: Project[] = [
     title: "E-commerce Platform",
     description:
       "TPC SURPLUS is a sophisticated e-commerce platform specializing in electronics and computer hardware.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/website.jpg-VeFGIi4e4qnnaMoNTPPzXNIsvWh7yf.jpeg",
+    image: "../images/ecommerce.jpeg",
     longDescription:
       "TPC SURPLUS is a sophisticated e-commerce platform specializing in electronics and computer hardware. The platform features a modern, user-friendly interface with advanced search capabilities, product categorization, and dynamic collection displays. Key features include a responsive product grid, real-time hot deals with countdown timers, wishlist functionality, and a secure shopping cart system. The platform offers a seamless shopping experience for browsing and purchasing electronics, from laptops and smartphones to accessories and cameras.",
     technologies: ["HTML", "CSS", "Javascript"],
