@@ -11,7 +11,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "ecommerce-platform",
-    title: "E-commerce Platform",
+    title: "TPC Surplus",
     description:
       "TPC SURPLUS is a sophisticated e-commerce platform specializing in electronics and computer hardware.",
     image: "../images/ecommerce.jpeg",
@@ -22,7 +22,7 @@ export const projects: Project[] = [
   },
   {
     id: "social-media-app",
-    title: "Social Media Application",
+    title: "Universe",
     description: "A dynamic social media platform built for IT professionals, students, and tech enthusiasts",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/socialmediaapp.jpg-A9UTMFua3cPxoU5ee1nR81UA1DfxZM.jpeg",
@@ -33,7 +33,7 @@ export const projects: Project[] = [
   },
   {
     id: "admission-system",
-    title: "University Admission System",
+    title: "Beastlink Admission System",
     description: "A comprehensive admission management system for Beastlink University",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-7zvY5YQeZgl8Lk8F7IA5TNgPAm7uJA.png",
     longDescription:

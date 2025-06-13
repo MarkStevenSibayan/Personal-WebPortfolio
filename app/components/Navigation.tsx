@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Home, Code, Menu, X, Briefcase, Mail } from "lucide-react"
-import { Code2 } from "lucide-react"
+import { Fingerprint } from "lucide-react"
 import { useState } from "react"
 
 export default function Navigation() {
@@ -14,7 +14,7 @@ export default function Navigation() {
     { href: "/", label: "Home", icon: Home },
     { href: "/projects", label: "Projects", icon: Briefcase },
     { href: "/skills", label: "Skills", icon: Code },
-    { href: "/resume", label: "Resume", icon: Code2 },
+    { href: "/resume", label: "Resume", icon: Briefcase },
     { href: "/contact", label: "Contact", icon: Mail },
   ]
 
@@ -23,8 +23,8 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <Code2 size={32} className="text-blue-400" />
-            <span className="ml-2 text-xl font-bold text-white">Portfolio</span>
+            <Fingerprint size={32} className="text-blue-400" />
+            <span className="ml-2 text-xl font-bold text-white">Web Portfolio</span>
           </div>
           <div className="hidden md:flex space-x-4">
             {navItems.map(({ href, label, icon: Icon }) => (

@@ -25,15 +25,19 @@ import {
   Info,
   Rocket,
   Award,
+  Figma,
 } from "lucide-react"
 
 const skills = [
-  { name: "Java", category: "Frontend", icon: FileCode2 },
   { name: "C#", category: "Frontend", icon: Hash },
-  { name: "TypeScript", category: "Frontend", icon: FileJson },
   { name: "HTML", category: "Frontend", icon: Globe },
   { name: "CSS", category: "Frontend", icon: Palette },
   { name: "React", category: "Frontend", icon: Code2 },
+  { name: "Java", category: "Frontend", icon: FileCode2 },
+  { name: "TypeScript", category: "Frontend", icon: FileJson },
+  { name: "JavaScript", category: "Frontend", icon: Braces },
+  
+  
   { name: "Tailwind", category: "Frontend", icon: Server },
 
   { name: "Laravel", category: "Backend", icon: Database },
@@ -41,16 +45,16 @@ const skills = [
 
   { name: "VSCode", category: "Tools", icon: Laptop },
   { name: "Github", category: "Tools", icon: GithubIcon },
+  { name: "Vercel", category: "Tools", icon: Rocket },
   { name: "NetBeans", category: "Tools", icon: Folder },
   { name: "Blender", category: "Tools", icon: MonitorSmartphone },
-  { name: "Vercel", category: "Tools", icon: Rocket },
-  { name: "Wordpress", category: "Tools", icon: Award },
   { name: "MS Word", category: "Tools", icon: Binary },
   { name: "MS Excel", category: "Tools", icon: Mail },
   { name: "MS Powerpoint", category: "Tools", icon: Presentation },
   { name: "Discord", category: "Tools", icon: Mic },
   { name: "Canva", category: "Tools", icon: Lightbulb },
   { name: "Jira", category: "Tools", icon: Compass },
+  { name: "Figma", category: "Tools", icon: Figma },
 ]
 
 const categories = ["Frontend", "Backend", "Tools"]

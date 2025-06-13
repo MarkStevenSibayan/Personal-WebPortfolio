@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Code } from "lucide-react"
+import { Code, Fingerprint } from "lucide-react"
 
 export default function Introduction() {
   return (
@@ -15,7 +15,7 @@ export default function Introduction() {
           priority
         />
         <div className="absolute -bottom-2 -right-2 bg-blue-500 text-white rounded-full p-1.5 shadow-lg z-20">
-          <Code size={16} className="sm:w-5 sm:h-5" />
+          <Fingerprint size={16} className="sm:w-5 sm:h-5" />
         </div>
       </div>
       <h1 className="text-3xl sm:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
