@@ -132,11 +132,11 @@ export default function Resume() {
       >
         <div className="bg-white p-4 rounded-lg shadow-lg">
           {typeof window !== "undefined" && (
-            <QRCodeSVG
-              value="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Resume.jpg-Tf6eXxm4FKfmPLPguugvUvng6YSnJl.jpeg"
-              size={160}
-              level="H"
-              includeMargin={true}
+            <img
+              src="./images/ResumeQR.jpeg"
+              // size={160}
+              // level="H"
+              // includeMargin={true}
               className="w-32 h-32 sm:w-40 sm:h-40"
             />
           )}

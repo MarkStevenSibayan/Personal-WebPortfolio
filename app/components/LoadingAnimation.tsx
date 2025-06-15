@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Code2 } from "lucide-react"
+import { Fingerprint } from "lucide-react"
 
 export default function LoadingAnimation() {
   return (
@@ -19,7 +19,7 @@ export default function LoadingAnimation() {
           transition={{ duration: 0.5 }}
           className="flex items-center justify-center mb-4"
         >
-          <Code2 size={48} className="text-blue-400" />
+          <Fingerprint size={48} className="text-blue-400" />
         </motion.div>
         <motion.h1
           initial={{ y: 20, opacity: 0 }}
