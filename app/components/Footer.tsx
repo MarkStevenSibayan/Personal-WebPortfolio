@@ -1,4 +1,4 @@
-import { Github, Linkedin, Facebook } from "lucide-react"
+import { Github, Linkedin, Facebook, Instagram } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -28,6 +28,14 @@ export default function Footer() {
             className="text-gray-400 hover:text-white transition-colors"
           >
             <Facebook size={20} className="sm:w-6 sm:h-6" />
+          </a>
+          <a
+            href="https://www.instagram.com/mr_kenj1/?source=omni_redirect"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-white transition-colors"
+          >
+            <Instagram size={20} className="sm:w-6 sm:h-6" />
           </a>
         </div>
         <p className="text-gray-400 text-center text-sm sm:text-base">
