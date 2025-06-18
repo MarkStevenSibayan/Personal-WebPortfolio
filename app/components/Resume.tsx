@@ -35,18 +35,18 @@ export default function Resume() {
         },
       ],
     },
-    {
-      title: "Work Experience",
-      icon: Briefcase,
-      items: [
-        {
-          title: "Assistant Manager",
-          place: "MexicanChille",
-          date: "2020-2021",
-          description: "Handle account destribution, applicant interview, and payment destribution",
-        },
-      ],
-    },
+    // {
+    //   title: "Work Experience",
+    //   icon: Briefcase,
+    //   items: [
+    //     {
+    //       title: "Assistant Manager",
+    //       place: "MexicanChille",
+    //       date: "2020-2021",
+    //       description: "Handle account destribution, applicant interview, and payment destribution",
+    //     },
+    //   ],
+    // },
     {
       title: "Achievements",
       icon: Award,
@@ -141,7 +141,7 @@ export default function Resume() {
             />
           )}
         </div>
-        <p className="mt-4 text-sm sm:text-base text-gray-400 text-center">Scan to view my detailed resume</p>
+        <p className="mt-4 text-sm sm:text-base text-gray-400 text-center">Scan to view my Resume</p>
       </motion.div>
 
       <div className="space-y-6 sm:space-y-8">
