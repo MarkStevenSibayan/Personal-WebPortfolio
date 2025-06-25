@@ -28,7 +28,7 @@ export const projects: Project[] = [
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/socialmediaapp.jpg-A9UTMFua3cPxoU5ee1nR81UA1DfxZM.jpeg",
     longDescription:
       "Universe is a dynamic social media platform built for IT professionals, students, and tech enthusiasts to share, save, and explore IT-related content. Whether you're into programming, cybersecurity, AI, networking, or emerging tech, Universe provides a space to post valuable insights, discover trending topics, and engage in meaningful discussions.",
-    technologies: ["Typescript", "Javascript", "HTML", "SCSS"],
+    technologies: ["Typescript", "Javascript", "HTML", "SCSS", "Angular"],
     githubLink: "https://github.com/MarkStevenSibayan/MobileApp-Universe",
   },
   {
@@ -38,7 +38,7 @@ export const projects: Project[] = [
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-7zvY5YQeZgl8Lk8F7IA5TNgPAm7uJA.png",
     longDescription:
       "Beastlink University Admission System is a comprehensive platform designed to streamline the entire admission process. The system features an intuitive applicant dashboard with a progress tracker showing application stages (Application, Document, Exam, Interview, Decision, Enrollment). It includes course browsing functionality with detailed information about various programs across different colleges. Administrators can manage applicants, track their progress, and communicate with prospective students. The system supports multiple user roles including applicants, admission officers, and department heads.",
-    technologies: ["React", "Next.js", "TailwindCSS", "Node.js", "MongoDB"],
+    technologies: ["React JS", "TailwindCSS", "HTML", "Laravel"],
     githubLink: "https://github.com/MarkStevenSibayan/Beastlink-AdmissionManagementSystem",
   },
 ]

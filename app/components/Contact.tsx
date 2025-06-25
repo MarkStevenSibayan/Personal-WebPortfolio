@@ -239,7 +239,7 @@ export default function Contact() {
               transition={{ delay: 0.4 }}
               className="bg-gray-800/50 p-6 rounded-lg backdrop-blur-sm border border-gray-700/50"
             >
-              <h3 className="text-2xl font-bold text-gray-100 mb-4">Let's Connect</h3>
+              <h3 className="text-2xl font-bold text-gray-100 mb-4">Let's Connect!</h3>
               <p className="text-gray-300 mb-6">
                 Whether you have a project in mind, want to collaborate, or just want to say hello, I'd love to hear
                 from you. Feel free to reach out through any of the channels above or use the contact form.
