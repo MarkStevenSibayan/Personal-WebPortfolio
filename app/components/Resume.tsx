@@ -14,15 +14,19 @@ export default function Resume() {
       icon: Book,
       items: [
         {
-          title: "Kinder to Grade 6",
+          title: "Kinder to Elementary",
           place: "Wawang Pulo Elementary School",
+          date: "2009 - 2016",
+          description: "",
         },
         {
-          title: "Grade 7 to Grade 10",
+          title: "Junior High School",
           place: "Wawang Pulo National High School",
+          date: "2016 - 2020",
+          description: "",
         },
         {
-          title: "Grade 11 to Grade 12",
+          title: "Senior High School",
           place: "Pamantasan ng Lungsod ng Valenzuela",
           date: "2020-2022",
           description: "Science, Technology, Engineering, and Mathematics (STEM) student",
@@ -31,7 +35,7 @@ export default function Resume() {
           title: "College",
           place: "Pamantasan ng Lungsod ng Valenzuela",
           date: "2022 - Present",
-          description: "Bachelor of Science and Information Technology (IT) student",
+          description: "Bachelor of Science and Information Technology (BSIT) student",
         },
       ],
     },
@@ -64,13 +68,13 @@ export default function Resume() {
           description: "8th Place in MTOP during grade 10",
         },
         {
-          title: "With High Honor",
+          title: "With Honor",
           place: "Wawang Pulo National High School",
           date: "2015-2020",
           description: "Junior High School",
         },
         {
-          title: "With High Honor",
+          title: "With Honor",
           place: "Pamantasan ng Lungsod ng Valenzuela",
           date: "2015-2020",
           description: "Senior High Graduation as a STEM student",
@@ -78,8 +82,7 @@ export default function Resume() {
         {
           title: "Dean's Lister",
           place: "Pamantasan ng Lungsod ng Valenzuela",
-          date: "2021-2023",
-          description: "Maintained academic excellence throughout the academic years.",
+          date: "2022-2023",
         },
       ],
     },

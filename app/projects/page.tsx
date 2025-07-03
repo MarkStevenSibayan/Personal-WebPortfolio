@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import Image from "next/image"
-import { Github } from "lucide-react"
+import { Folder } from "lucide-react"
 import { projects } from "../data/projects"
 
 export default function ProjectsPage() {
@@ -33,7 +33,7 @@ export default function ProjectsPage() {
           <div
             key={project.id}
             id={project.id}
-            ref={(el) => (projectRefs.current[index] = el)}
+            // ref={(el) => (projectRefs.current[index] = el)}
             className="bg-gray-800 rounded-lg overflow-hidden shadow-lg scroll-mt-20"
           >
             <div className="md:flex">
@@ -48,6 +48,7 @@ export default function ProjectsPage() {
               </div>
               <div className="p-8">
                 <h2 className="text-2xl font-bold text-white mb-2">{project.title}</h2>
+                <p className="text-gray-300 font-semibold mb-4">{project.role}</p>
                 <p className="text-gray-300 mb-4">{project.longDescription}</p>
                 <div className="mb-4">
                   <h3 className="text-lg font-semibold text-white mb-2">Technologies Used:</h3>
@@ -59,17 +60,19 @@ export default function ProjectsPage() {
                     ))}
                   </div>
                 </div>
-                <div className="flex flex-wrap gap-4">
-                  <a
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
-                  >
-                    <Github className="mr-2" size={20} />
-                    View on GitHub
-                  </a>
-                </div>
+                {project.id !== "capstone-project" && (
+                  <div className="flex flex-wrap gap-4">
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
+                    >
+                      <Folder className="mr-2" size={20} />
+                      Project Link
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -95,8 +98,16 @@ export default function ProjectsPage() {
           <div className="mt-4">
             <h3 className="text-xl font-semibold text-white mb-2">Blender Animation Project</h3>
             <p className="text-gray-300">
-              A showcase of my 3D modeling and animation skills using Blender. This project demonstrates my ability to
-              create engaging visual content and work with professional 3D software.
+              A short clip of my 3D modeling and animation using Blender. This project demonstrates my ability to
+              create engaging visual content and work with professional 3D software.&nbsp;
+              <a
+                href="https://drive.google.com/file/d/1_baC9cqzQmrhaZClNw33Yz5Uim2qVxIk/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 underline hover:text-blue-300"
+              >
+                 Click to Watch
+              </a>
             </p>
             <div className="mt-4">
               <span className="bg-gray-700 text-gray-200 px-3 py-1 rounded-full text-sm">Blender</span>
