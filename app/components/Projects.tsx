@@ -32,6 +32,42 @@ export default function Projects() {
           </Link>
         ))}
       </div>
+      {/* 3D Animation Showcase */}
+      <div className="mt-16">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-center bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+          3D Animation Showcase
+        </h2>
+        <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg p-6">
+          <div className="aspect-video relative rounded-lg overflow-hidden">
+            <video
+              className="w-full h-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/blenderproject1-CP1OpIRzR5OKLQxcxjf9gIPt6lw5oh.mp4"
+            />
+          </div>
+          <div className="mt-4">
+            <h3 className="text-xl font-semibold text-white mb-2">3D Animation: A Silent Departure</h3>
+            <p className="text-gray-300">
+              A short clip of my 3D modeling and animation using Blender. This project demonstrates my ability to
+              create engaging visual content and work with professional 3D software.&nbsp;
+              <a
+                href="https://drive.google.com/file/d/1_baC9cqzQmrhaZClNw33Yz5Uim2qVxIk/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 underline hover:text-blue-300"
+              >
+                 Click to Watch
+              </a>
+            </p>
+            <div className="mt-4">
+              <span className="bg-gray-700 text-gray-200 px-3 py-1 rounded-full text-sm">Blender</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   )
 }

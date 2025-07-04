@@ -96,7 +96,7 @@ export default function ProjectsPage() {
             />
           </div>
           <div className="mt-4">
-            <h3 className="text-xl font-semibold text-white mb-2">Blender Animation Project</h3>
+            <h3 className="text-xl font-semibold text-white mb-2">3D Animation: A Silent Departure</h3>
             <p className="text-gray-300">
               A short clip of my 3D modeling and animation using Blender. This project demonstrates my ability to
               create engaging visual content and work with professional 3D software.&nbsp;
