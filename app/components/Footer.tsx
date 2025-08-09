@@ -37,6 +37,7 @@ export default function Footer() {
           >
             <Instagram size={20} className="sm:w-6 sm:h-6" />
           </a>
+         
         </div>
         <p className="text-gray-400 text-center text-sm sm:text-base">
           &copy; {new Date().getFullYear()} MarkStevenSibayan. All rights reserved.

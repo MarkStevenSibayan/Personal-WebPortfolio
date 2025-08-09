@@ -24,7 +24,7 @@ export default function Introduction() {
       <p className="text-lg sm:text-xl text-gray-400 mb-4">Bachelor of Science in Information Technology</p>
       <p className="max-w-2xl mx-auto text-gray-300 text-sm sm:text-base">
         I am a 4th-year IT student passionate about technology and related skills. Skilled in programming, web
-        development, and communication I am eager to gain hands-on experience and grow in the IT industry.
+        development, and hardware troubleshooting. I am eager to gain hands-on experience and grow in the IT industry.
       </p>
     </section>
   )

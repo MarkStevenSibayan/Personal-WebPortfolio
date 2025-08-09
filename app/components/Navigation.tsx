@@ -24,7 +24,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
             <Fingerprint size={32} className="text-blue-400" />
-            <span className="ml-2 text-xl font-bold text-white">Web Portfolio</span>
+            <span className="ml-2 text-xl font-bold text-white">Sibayan's Portfolio</span>
           </div>
           <div className="hidden md:flex space-x-4">
             {navItems.map(({ href, label, icon: Icon }) => (

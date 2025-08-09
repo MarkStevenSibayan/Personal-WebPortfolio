@@ -10,47 +10,44 @@ const QRCodeSVG = dynamic(() => import("qrcode.react").then((mod) => mod.QRCodeS
 export default function Resume() {
   const sections = [
     {
-      title: "Education",
-      icon: Book,
+      title: "Work Experience",
+      icon: Briefcase,
       items: [
         {
-          title: "Kinder to Elementary",
-          place: "Wawang Pulo Elementary School",
-          date: "2009 - 2016",
-          description: "",
-        },
-        {
-          title: "Junior High School",
-          place: "Wawang Pulo National High School",
-          date: "2016 - 2020",
-          description: "",
-        },
-        {
-          title: "Senior High School",
-          place: "Pamantasan ng Lungsod ng Valenzuela",
-          date: "2020-2022",
-          description: "Science, Technology, Engineering, and Mathematics (STEM) student",
-        },
-        {
-          title: "College",
-          place: "Pamantasan ng Lungsod ng Valenzuela",
-          date: "2022 - Present",
-          description: "Bachelor of Science and Information Technology (BSIT) student",
+          title: "IT Support",
+          place: "Globe Maritime Training Center - Manila Inc.",
+          date: "2025 - Present",
+          description: "Providing IT support and assistance including hardware maintenance, network management, CCTV installation, Photo Editing, and hardware troubleshooting.",
         },
       ],
     },
-    // {
-    //   title: "Work Experience",
-    //   icon: Briefcase,
-    //   items: [
-    //     {
-    //       title: "Assistant Manager",
-    //       place: "MexicanChille",
-    //       date: "2020-2021",
-    //       description: "Handle account destribution, applicant interview, and payment destribution",
-    //     },
-    //   ],
-    // },
+    {
+      title: "Certifications",
+      icon: Certificate,
+      items: [
+        {
+          title: "Data Privacy Essentials: A User's Manual",
+          place: "Pamantasan ng Lungsod ng Valenzuela",
+          date: "April 20, 2024",
+          description:
+            "The Data Privacy Essentials Seminar is designed to educate individuals and organizations on the fundamental principles of data privacy, its importance, and best practices for safeguarding sensitive information.",
+        },
+        {
+          title: "Scrum 101 Introduction",
+          place: "Pamantasan ng Lungsod ng Valenzuela",
+          date: "April 20, 2024",
+          description:
+            "This seminar will cover the core principles of Scrum, including its roles (Scrum Master, Product Owner, and Development Team), key events (Sprint, Daily Stand-up, Sprint Review, and Retrospective), and essential artifacts (Product Backlog, Sprint Backlog, and Increment).",
+        },
+        {
+          title: "EnGamed: Game Development Introduction to Game Engines",
+          place: "Pamantasan ng Lungsod ng Valenzuela",
+          date: "April 24, 2024",
+          description:
+            "This seminar will explore popular game engines such as Unity, Unreal Engine, and Godot, comparing their features, strengths, and ideal use cases.",
+        },
+      ],
+    },
     {
       title: "Achievements",
       icon: Award,
@@ -87,29 +84,32 @@ export default function Resume() {
       ],
     },
     {
-      title: "Certifications",
-      icon: Certificate,
+      title: "Education",
+      icon: Book,
       items: [
         {
-          title: "Data Privacy Essentials: A User's Manual",
-          place: "Pamantasan ng Lungsod ng Valenzuela",
-          date: "April 20, 2024",
-          description:
-            "The Data Privacy Essentials Seminar is designed to educate individuals and organizations on the fundamental principles of data privacy, its importance, and best practices for safeguarding sensitive information.",
+          title: "Kinder to Elementary",
+          place: "Wawang Pulo Elementary School",
+          date: "2009 - 2016",
+          description: "",
         },
         {
-          title: "Scrum 101 Introduction",
-          place: "Pamantasan ng Lungsod ng Valenzuela",
-          date: "April 20, 2024",
-          description:
-            "This seminar will cover the core principles of Scrum, including its roles (Scrum Master, Product Owner, and Development Team), key events (Sprint, Daily Stand-up, Sprint Review, and Retrospective), and essential artifacts (Product Backlog, Sprint Backlog, and Increment).",
+          title: "Junior High School",
+          place: "Wawang Pulo National High School",
+          date: "2016 - 2020",
+          description: "",
         },
         {
-          title: "EnGamed: Game Development Introduction to Game Engines",
+          title: "Senior High School",
           place: "Pamantasan ng Lungsod ng Valenzuela",
-          date: "April 24, 2024",
-          description:
-            "This seminar will explore popular game engines such as Unity, Unreal Engine, and Godot, comparing their features, strengths, and ideal use cases.",
+          date: "2020-2022",
+          description: "Science, Technology, Engineering, and Mathematics (STEM) student",
+        },
+        {
+          title: "College",
+          place: "Pamantasan ng Lungsod ng Valenzuela",
+          date: "2022 - Present",
+          description: "Bachelor of Science and Information Technology (BSIT) student",
         },
       ],
     },
