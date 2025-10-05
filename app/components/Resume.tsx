@@ -1,18 +1,12 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Award, Book, Briefcase, Briefcase as Certificate, Download, ExternalLink } from "lucide-react"
+import { Award, Book, Briefcase, Briefcase as Certificate, QrCode } from "lucide-react"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
+import { QRCodeSVG } from "qrcode.react"
 
 export default function Resume() {
-  const handleDownload = () => {
-    // Open the resume in a new tab - user can save it from there
-    window.open(
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Mark-Steven-Sibayan-Resume-lQm0pXZqK8xJ9wYzF7fH6P3tN2jR4s.pdf",
-      "_blank",
-    )
-  }
+  const resumeUrl = "https://drive.google.com/file/d/YOUR_RESUME_ID/view" // Replace with your actual Google Drive link
 
   const sections = [
     {
@@ -140,7 +134,7 @@ export default function Resume() {
         My Resume
       </h2>
 
-      {/* Download Resume Section */}
+      {/* QR Code Section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -150,19 +144,16 @@ export default function Resume() {
         <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 p-6 sm:p-8 rounded-2xl border border-blue-500/20 backdrop-blur-sm w-full max-w-md">
           <div className="flex flex-col items-center space-y-4">
             <div className="p-4 bg-blue-500/20 rounded-full">
-              <Download className="w-8 h-8 sm:w-12 sm:h-12 text-blue-400" />
+              <QrCode className="w-8 h-8 sm:w-12 sm:h-12 text-blue-400" />
             </div>
-            <h3 className="text-xl sm:text-2xl font-bold text-white text-center">View My Resume</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-white text-center">Scan to View Resume</h3>
             <p className="text-sm sm:text-base text-gray-400 text-center">
-              View and download a PDF copy of my complete resume
+              Scan the QR code below to access my complete resume
             </p>
-            <Button
-              onClick={handleDownload}
-              className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-4 sm:py-6 text-base sm:text-lg transition-all duration-300 transform hover:scale-105"
-            >
-              <ExternalLink className="w-5 h-5 mr-2" />
-              View Resume (PDF)
-            </Button>
+            <div className="bg-white p-4 rounded-lg">
+              <QRCodeSVG value={resumeUrl} size={200} level="H" includeMargin={true} />
+            </div>
+            <p className="text-xs text-gray-500 text-center">Scan with your phone's camera</p>
           </div>
         </div>
       </motion.div>
