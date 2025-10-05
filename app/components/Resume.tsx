@@ -31,7 +31,7 @@ export default function Resume() {
           date: "April 20, 2024",
           description:
             "The Data Privacy Essentials Seminar is designed to educate individuals and organizations on the fundamental principles of data privacy, its importance, and best practices for safeguarding sensitive information.",
-          image: "/images/cert-data-privacy.jpg",
+          image: "/images/cert-data-privacy.png",
         },
         {
           title: "Scrum 101 Introduction",
@@ -39,7 +39,7 @@ export default function Resume() {
           date: "April 20, 2024",
           description:
             "This seminar will cover the core principles of Scrum, including its roles (Scrum Master, Product Owner, and Development Team), key events (Sprint, Daily Stand-up, Sprint Review, and Retrospective), and essential artifacts (Product Backlog, Sprint Backlog, and Increment).",
-          image: "/images/cert-scrum.jpg",
+          image: "/images/cert-scrum.png",
         },
         {
           title: "EnGamed: Game Development Introduction to Game Engines",
@@ -47,7 +47,7 @@ export default function Resume() {
           date: "April 24, 2024",
           description:
             "This seminar will explore popular game engines such as Unity, Unreal Engine, and Godot, comparing their features, strengths, and ideal use cases.",
-          image: "/images/cert-game-dev.jpg",
+          image: "/images/cert-game-dev.png",
         },
       ],
     },
