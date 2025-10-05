@@ -1,15 +1,13 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Award, Book, Briefcase, BadgeIcon as Certificate } from "lucide-react"
-import dynamic from "next/dynamic"
-
-// Dynamically import the QR code component with no SSR
-const QRCodeSVG = dynamic(() => import("qrcode.react").then((mod) => mod.QRCodeSVG), { ssr: false })
+import { Award, Book, Briefcase, Briefcase as Certificate } from "lucide-react"
+import Image from "next/image"
 
 export default function Resume() {
   const sections = [
     {
+      id: "work-experience",
       title: "Work Experience",
       icon: Briefcase,
       items: [
@@ -17,11 +15,13 @@ export default function Resume() {
           title: "IT Support",
           place: "Globe Maritime Training Center - Manila Inc.",
           date: "2025 - Present",
-          description: "Providing IT support and assistance including hardware maintenance, network management, CCTV installation, Photo Editing, and hardware troubleshooting.",
+          description:
+            "Providing IT support and assistance including hardware maintenance, network management, CCTV installation, Photo Editing, and hardware troubleshooting.",
         },
       ],
     },
     {
+      id: "certifications",
       title: "Certifications",
       icon: Certificate,
       items: [
@@ -31,6 +31,7 @@ export default function Resume() {
           date: "April 20, 2024",
           description:
             "The Data Privacy Essentials Seminar is designed to educate individuals and organizations on the fundamental principles of data privacy, its importance, and best practices for safeguarding sensitive information.",
+          image: "/images/cert-data-privacy.jpg",
         },
         {
           title: "Scrum 101 Introduction",
@@ -38,6 +39,7 @@ export default function Resume() {
           date: "April 20, 2024",
           description:
             "This seminar will cover the core principles of Scrum, including its roles (Scrum Master, Product Owner, and Development Team), key events (Sprint, Daily Stand-up, Sprint Review, and Retrospective), and essential artifacts (Product Backlog, Sprint Backlog, and Increment).",
+          image: "/images/cert-scrum.jpg",
         },
         {
           title: "EnGamed: Game Development Introduction to Game Engines",
@@ -45,10 +47,12 @@ export default function Resume() {
           date: "April 24, 2024",
           description:
             "This seminar will explore popular game engines such as Unity, Unreal Engine, and Godot, comparing their features, strengths, and ideal use cases.",
+          image: "/images/cert-game-dev.jpg",
         },
       ],
     },
     {
+      id: "achievements",
       title: "Achievements",
       icon: Award,
       items: [
@@ -84,6 +88,7 @@ export default function Resume() {
       ],
     },
     {
+      id: "education",
       title: "Education",
       icon: Book,
       items: [
@@ -134,15 +139,13 @@ export default function Resume() {
         className="flex flex-col items-center mb-8 sm:mb-12"
       >
         <div className="bg-white p-4 rounded-lg shadow-lg">
-          {typeof window !== "undefined" && (
-            <img
-              src="./images/ResumeQR.jpeg"
-              // size={160}
-              // level="H"
-              // includeMargin={true}
-              className="w-32 h-32 sm:w-40 sm:h-40"
-            />
-          )}
+          <Image
+            src="/images/ResumeQR.jpeg"
+            alt="Resume QR Code"
+            width={160}
+            height={160}
+            className="w-32 h-32 sm:w-40 sm:h-40"
+          />
         </div>
         <p className="mt-4 text-sm sm:text-base text-gray-400 text-center">Scan to view my Resume</p>
       </motion.div>
@@ -151,10 +154,11 @@ export default function Resume() {
         {sections.map((section, sectionIndex) => (
           <motion.div
             key={section.title}
+            id={section.id}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: sectionIndex * 0.2 }}
-            className="bg-gray-800/50 rounded-lg p-4 sm:p-6 backdrop-blur-sm"
+            className="bg-gray-800/50 rounded-lg p-4 sm:p-6 backdrop-blur-sm scroll-mt-20"
           >
             <div className="flex items-center mb-3 sm:mb-4">
               <section.icon className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400 mr-2" />
@@ -173,6 +177,18 @@ export default function Resume() {
                   <p className="text-blue-400 text-sm sm:text-base">{item.place}</p>
                   <p className="text-xs sm:text-sm text-gray-400">{item.date}</p>
                   <p className="mt-1 sm:mt-2 text-gray-300 text-sm sm:text-base">{item.description}</p>
+
+                  {/* Display certification image if available */}
+                  {item.image && (
+                    <div className="mt-4 relative h-48 w-full rounded-lg overflow-hidden">
+                      <Image
+                        src={item.image || "/placeholder.svg"}
+                        alt={item.title}
+                        fill
+                        className="object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  )}
                 </motion.div>
               ))}
             </div>
