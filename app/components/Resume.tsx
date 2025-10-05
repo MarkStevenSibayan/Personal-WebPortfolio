@@ -1,20 +1,17 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Award, Book, Briefcase, Briefcase as Certificate, Download } from "lucide-react"
+import { Award, Book, Briefcase, Briefcase as Certificate, Download, ExternalLink } from "lucide-react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
 export default function Resume() {
   const handleDownload = () => {
-    // Create a link element to trigger download
-    const link = document.createElement("a")
-    link.href = "/Mark-Steven-Sibayan-Resume.pdf"
-    link.download = "Mark-Steven-Sibayan-Resume.pdf"
-    link.target = "_blank"
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
+    // Open the resume in a new tab - user can save it from there
+    window.open(
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Mark-Steven-Sibayan-Resume-lQm0pXZqK8xJ9wYzF7fH6P3tN2jR4s.pdf",
+      "_blank",
+    )
   }
 
   const sections = [
@@ -155,16 +152,16 @@ export default function Resume() {
             <div className="p-4 bg-blue-500/20 rounded-full">
               <Download className="w-8 h-8 sm:w-12 sm:h-12 text-blue-400" />
             </div>
-            <h3 className="text-xl sm:text-2xl font-bold text-white text-center">Download My Resume</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-white text-center">View My Resume</h3>
             <p className="text-sm sm:text-base text-gray-400 text-center">
-              Get a PDF copy of my complete resume with all details
+              View and download a PDF copy of my complete resume
             </p>
             <Button
               onClick={handleDownload}
               className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-4 sm:py-6 text-base sm:text-lg transition-all duration-300 transform hover:scale-105"
             >
-              <Download className="w-5 h-5 mr-2" />
-              Download Resume (PDF)
+              <ExternalLink className="w-5 h-5 mr-2" />
+              View Resume (PDF)
             </Button>
           </div>
         </div>
