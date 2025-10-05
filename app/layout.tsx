@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     description: "Information Technology student passionate about web development and problem-solving.",
     images: ["/images/og-image.jpg"],
   },
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
@@ -50,10 +50,12 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/favicon-128x128.png" />
       </head>
-      <body className={`${inter.className} bg-gray-900 text-gray-100 flex flex-col min-h-screen pt-16`}>
+      <body className={`${inter.className} bg-gray-900 text-gray-100 flex flex-col min-h-screen`}>
         <LoadingWrapper>
           <Navigation />
-          <div className="flex-grow max-w-6xl mx-auto px-4 py-8">{children}</div>
+          <div className="flex-grow pt-16">
+            <div className="max-w-7xl mx-auto">{children}</div>
+          </div>
           <Footer />
         </LoadingWrapper>
       </body>
