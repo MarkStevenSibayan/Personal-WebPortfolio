@@ -7,13 +7,11 @@ import { Button } from "@/components/ui/button"
 
 export default function Resume() {
   const handleDownload = () => {
-    // For now, this will alert the user. You can replace this with actual file download
-    // alert("To download the resume, please add your PDF file to /public/resume/Mark-Steven-Sibayan-Resume.pdf")
-
-    // Uncomment this code once you add the PDF file:
+    // Create a link element to trigger download
     const link = document.createElement("a")
-    link.href = "/resume/Mark-Steven-Sibayan-Resume.pdf"
+    link.href = "/Mark-Steven-Sibayan-Resume.pdf"
     link.download = "Mark-Steven-Sibayan-Resume.pdf"
+    link.target = "_blank"
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
