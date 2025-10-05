@@ -4,7 +4,7 @@ import ResumePreview from "./components/ResumePreview"
 
 export default function Home() {
   return (
-    <main className="w-full py-8 sm:py-12">
+    <main>
       <Introduction />
       <ResumePreview />
       <Projects />
