@@ -6,7 +6,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
 export default function Resume() {
-  const resumeUrl = "https://drive.google.com/file/d/YOUR_RESUME_ID/view" // Replace with your actual Google Drive link
+  const resumeUrl = "https://drive.google.com/file/d/1rJwKRorBOdRJQxzQDzJU0pYfpzqS6N5X/view?usp=sharing" // Replace with your actual Google Drive link
 
   const sections = [
     {
@@ -75,7 +75,7 @@ export default function Resume() {
           title: "With Honor",
           place: "Wawang Pulo National High School",
           date: "2015-2020",
-          description: "Junior High School",
+          description: "",
         },
         {
           title: "With Honor",
@@ -151,7 +151,7 @@ export default function Resume() {
                 qualifications
               </p>
               <Button
-                onClick={() => window.open(resumeUrl, "https://drive.google.com/file/d/1rJwKRorBOdRJQxzQDzJU0pYfpzqS6N5X/view?usp=sharing")}
+                onClick={() => window.open(resumeUrl, "_blank")}
                 className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-8 text-base sm:text-lg transition-all duration-300 transform hover:scale-105"
               >
                 <ExternalLink className="w-5 h-5 mr-2" />
