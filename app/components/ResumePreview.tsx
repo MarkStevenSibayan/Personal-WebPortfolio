@@ -53,11 +53,11 @@ export default function ResumePreview() {
                     </div>
 
                     <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-cyan-400 transition-all">
-                      IT Support Professional
+                      IT Technical Support
                     </h3>
 
                     <p className="text-gray-400 mb-6 flex-grow leading-relaxed">
-                      Currently providing technical support at Globe Maritime Training Center, specializing in hardware
+                      Currently providing technical support at <b> Globe Maritime Training Center</b>, specializing in hardware
                       maintenance, network management, and CCTV systems.
                     </p>
 
