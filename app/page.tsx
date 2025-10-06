@@ -1,6 +1,7 @@
 import Introduction from "./components/Introduction"
 import Projects from "./components/Projects"
 import ResumePreview from "./components/ResumePreview"
+import FloatingResumeButton from "./components/FloatingResumeButton"
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Introduction />
       <ResumePreview />
       <Projects />
+      <FloatingResumeButton />
     </main>
   )
 }
