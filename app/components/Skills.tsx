@@ -68,9 +68,10 @@ const skills = [
   { name: "Adaptable", category: "Personal", icon: Blocks },
 
   { name: "Technical Support", category: "Technical", icon: Presentation },
-  { name: "Basic Hardware Troubleshooting", category: "Technical", icon: Laptop },
+  { name: "Hardware Troubleshooting", category: "Technical", icon: Laptop },
   { name: "Technical Writting", category: "Technical", icon: Presentation },
-  { name: "Programming", category: "Technical", icon: Code2 },
+  { name: "Basic Programming", category: "Technical", icon: Code2 },
+  { name: "Networking", category: "Technical", icon: Laptop },
 ]
 
 const categories = ["Personal", "Technical", "Frontend", "Backend", "Tools"]
