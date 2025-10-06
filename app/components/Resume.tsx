@@ -1,10 +1,13 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Award, Book, Briefcase, Briefcase as Certificate } from "lucide-react"
+import { Award, Book, Briefcase, Briefcase as Certificate, ExternalLink } from "lucide-react"
 import Image from "next/image"
+import { Button } from "@/components/ui/button"
 
 export default function Resume() {
+  const resumeUrl = "https://drive.google.com/file/d/YOUR_RESUME_ID/view" // Replace with your actual Google Drive link
+
   const sections = [
     {
       id: "work-experience",
@@ -131,23 +134,32 @@ export default function Resume() {
         My Resume
       </h2>
 
-      {/* QR Code Section */}
+      {/* Resume Button Section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
         className="flex flex-col items-center mb-8 sm:mb-12"
       >
-        <div className="bg-white p-4 rounded-lg shadow-lg">
-          <Image
-            src="/images/ResumeQR.jpeg"
-            alt="Resume QR Code"
-            width={160}
-            height={160}
-            className="w-32 h-32 sm:w-40 sm:h-40"
-          />
+        <div className="relative group">
+          <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+          <div className="relative bg-gray-900 px-8 py-6 rounded-lg">
+            <div className="text-center space-y-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-white">View My Full Resume</h3>
+              <p className="text-gray-400 text-sm sm:text-base max-w-md">
+                Access my complete professional resume with detailed information about my experience, skills, and
+                qualifications
+              </p>
+              <Button
+                onClick={() => window.open(resumeUrl, "https://drive.google.com/file/d/1rJwKRorBOdRJQxzQDzJU0pYfpzqS6N5X/view?usp=sharing")}
+                className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-8 text-base sm:text-lg transition-all duration-300 transform hover:scale-105"
+              >
+                <ExternalLink className="w-5 h-5 mr-2" />
+                Open Resume
+              </Button>
+            </div>
+          </div>
         </div>
-        <p className="mt-4 text-sm sm:text-base text-gray-400 text-center">Scan to view my Resume</p>
       </motion.div>
 
       <div className="space-y-6 sm:space-y-8">
