@@ -109,12 +109,12 @@ export default function ResumePreview() {
                     <div className="flex items-center gap-1.5 sm:gap-2 mb-2 sm:mb-3">
                       <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400" />
                       <span className="text-xs font-semibold text-purple-400 uppercase tracking-wider">
-                        Certifications
+                      Professional Credentials
                       </span>
                     </div>
 
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2 sm:mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 transition-all">
-                      Professional Credentials
+                      Certifications
                     </h3>
 
                     <p className="text-gray-400 text-xs sm:text-sm lg:text-base mb-3 sm:mb-4 flex-grow leading-relaxed line-clamp-3">
