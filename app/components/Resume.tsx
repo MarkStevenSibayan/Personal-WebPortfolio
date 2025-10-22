@@ -14,11 +14,11 @@ export default function Resume() {
       icon: Briefcase,
       items: [
         {
-          title: "IT Support",
+          title: "IT Staff",
           place: "Globe Maritime Training Center - Manila Inc.",
-          date: "2025 - Present",
+          date: "July 14, 2025 - October 17, 2025",
           description:
-            "Providing IT support and assistance including hardware maintenance, network management, CCTV installation, Photo Editing, and hardware troubleshooting.",
+            "Providing IT support and assistance including hardware maintenance, network management, CCTV installation, Photo and video Editing, and hardware troubleshooting.",
         },
       ],
     },
@@ -27,6 +27,14 @@ export default function Resume() {
       title: "Certifications",
       icon: Certificate,
       items: [
+        {
+          title: "Certificate of Completion: On the Job Training",
+          place: "Globe Maritime Training Center - Manila Inc.",
+          date: "October 17, 2025",
+          description:
+            "The Certificate of Completion from GMTC is awarded for successfully completing 486 hours of on-the-job training (OJT) in the IT Department and for fulfilling all assigned duties and responsibilities.",
+          certificateUrl: "https://drive.google.com/file/d/19v5r5FHjR9DnAHKFmVFjG1zN-KwrrRSX/view?usp=drive_link",
+        },
         {
           title: "Data Privacy Essentials: A User's Manual",
           place: "Pamantasan ng Lungsod ng Valenzuela",

@@ -198,7 +198,7 @@ export default function Contact() {
                       href="mailto:markstevensibayan11@gmail.com"
                       className="text-blue-400 hover:text-blue-300 transition-colors"
                     >
-                      markstevensibayan11@gmail.com
+                      markstevensibayan09@gmail.com
                     </a>
                   </div>
                 </motion.div>
