@@ -7,7 +7,7 @@ export default function Introduction() {
       <div className="relative w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-8 sm:mb-12">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full animate-pulse"></div>
         <Image
-          src="/images/design-mode/profilepic.jpg.jpeg"
+          src="/images/design-mode/profile.jpg"
           alt="Mark Steven B. Sibayan"
           width={160}
           height={160}
