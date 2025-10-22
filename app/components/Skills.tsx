@@ -24,10 +24,7 @@ import {
   Compass,
   Info,
   Rocket,
-  Award,
   Figma,
-
-
 } from "lucide-react"
 
 const skills = [
@@ -38,13 +35,9 @@ const skills = [
   { name: "Java", category: "Frontend", icon: FileCode2 },
   { name: "TypeScript", category: "Frontend", icon: FileJson },
   { name: "JavaScript", category: "Frontend", icon: Braces },
-  
-  
   { name: "Tailwind", category: "Frontend", icon: Server },
-
   { name: "Laravel", category: "Backend", icon: Database },
   { name: "Firebase", category: "Backend", icon: Info },
-
   { name: "VSCode", category: "Tools", icon: Laptop },
   { name: "Github", category: "Tools", icon: GithubIcon },
   { name: "Vercel", category: "Tools", icon: Rocket },
@@ -57,7 +50,6 @@ const skills = [
   { name: "Canva", category: "Tools", icon: Lightbulb },
   { name: "Jira", category: "Tools", icon: Compass },
   { name: "Figma", category: "Tools", icon: Figma },
-
   { name: "Tech Savvy", category: "Personal", icon: Code2 },
   { name: "Management Skill", category: "Personal", icon: Compass },
   { name: "Team Player", category: "Personal", icon: Blocks },
@@ -66,10 +58,9 @@ const skills = [
   { name: "Disciplined", category: "Personal", icon: Code2 },
   { name: "Passionate", category: "Personal", icon: Compass },
   { name: "Adaptable", category: "Personal", icon: Blocks },
-
   { name: "Technical Support", category: "Technical", icon: Presentation },
   { name: "Hardware Troubleshooting", category: "Technical", icon: Laptop },
-  { name: "Technical Writting", category: "Technical", icon: Presentation },
+  { name: "Technical Writing", category: "Technical", icon: Presentation },
   { name: "Basic Programming", category: "Technical", icon: Code2 },
   { name: "Networking", category: "Technical", icon: Laptop },
 ]

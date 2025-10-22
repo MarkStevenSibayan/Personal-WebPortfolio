@@ -4,7 +4,6 @@ import { Inter } from "next/font/google"
 import type React from "react"
 import Navigation from "./components/Navigation"
 import Footer from "./components/Footer"
-import LoadingWrapper from "./components/LoadingWrapper"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -35,7 +34,7 @@ export const metadata: Metadata = {
     description: "Information Technology student passionate about web development and problem-solving.",
     images: ["/images/og-image.jpg"],
   },
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
@@ -51,11 +50,9 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/favicon-128x128.png" />
       </head>
       <body className={`${inter.className} bg-gray-900 text-gray-100 flex flex-col min-h-screen pt-16`}>
-        <LoadingWrapper>
-          <Navigation />
-          <div className="flex-grow max-w-6xl mx-auto px-4 py-8">{children}</div>
-          <Footer />
-        </LoadingWrapper>
+        <Navigation />
+        <div className="flex-grow max-w-6xl mx-auto px-4 py-8 w-full">{children}</div>
+        <Footer />
       </body>
     </html>
   )

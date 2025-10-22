@@ -1,13 +1,11 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect } from "react"
 import Image from "next/image"
 import { Folder } from "lucide-react"
 import { projects } from "../data/projects"
 
 export default function ProjectsPage() {
-  const projectRefs = useRef<(HTMLDivElement | null)[]>([])
-
   useEffect(() => {
     if (typeof window !== "undefined") {
       const hash = window.location.hash
@@ -29,11 +27,10 @@ export default function ProjectsPage() {
         My Projects
       </h1>
       <div className="space-y-12">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <div
             key={project.id}
             id={project.id}
-            // ref={(el) => (projectRefs.current[index] = el)}
             className="bg-gray-800 rounded-lg overflow-hidden shadow-lg scroll-mt-20"
           >
             <div className="md:flex">
@@ -98,15 +95,15 @@ export default function ProjectsPage() {
           <div className="mt-4">
             <h3 className="text-xl font-semibold text-white mb-2">3D Animation: A Silent Departure</h3>
             <p className="text-gray-300">
-              A short clip of my 3D modeling and animation using Blender. This project demonstrates my ability to
-              create engaging visual content and work with professional 3D software.&nbsp;
+              A short clip of my 3D modeling and animation using Blender. This project demonstrates my ability to create
+              engaging visual content and work with professional 3D software.&nbsp;
               <a
                 href="https://drive.google.com/file/d/1_baC9cqzQmrhaZClNw33Yz5Uim2qVxIk/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-400 underline hover:text-blue-300"
               >
-                 Click to Watch
+                Click to Watch
               </a>
             </p>
             <div className="mt-4">
