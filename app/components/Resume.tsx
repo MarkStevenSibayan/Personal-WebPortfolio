@@ -13,12 +13,19 @@ export default function Resume() {
       title: "Work Experience",
       icon: Briefcase,
       items: [
-        {
+      {
           title: "IT Staff",
+          place: "Globe Maritime Training Center - Manila Inc.",
+          date: "November 3, 2025 - Current",
+          description:
+            "As an IT staff member, I was responsible for delivering comprehensive technical support and services, including hardware maintenance, network administration, CCTV system installation, photo and video editing, and diagnosing and resolving hardware-related issues.",
+        },
+        {
+          title: "IT Intern",
           place: "Globe Maritime Training Center - Manila Inc.",
           date: "July 14, 2025 - October 17, 2025",
           description:
-            "Providing IT support and assistance including hardware maintenance, network management, CCTV installation, Photo and video Editing, and hardware troubleshooting.",
+            "As an IT intern, I provided technical support and assistance, which included maintaining computer hardware, managing networks, installing CCTV systems, performing photo and video editing tasks, and troubleshooting hardware issues.",
         },
       ],
     },
