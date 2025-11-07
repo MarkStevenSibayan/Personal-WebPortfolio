@@ -14,7 +14,7 @@ export default function Resume() {
       icon: Briefcase,
       items: [
       {
-          title: "Multimedia Staff",
+          title: "IT Staff - Multimedia",
           place: "Globe Maritime Training Center - Manila Inc.",
           date: "November 3, 2025 - Current",
           description:

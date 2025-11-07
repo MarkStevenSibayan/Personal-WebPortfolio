@@ -42,7 +42,7 @@ export default function ResumePreview() {
                   </div>
 
                   <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2 sm:mb-3 group-hover:text-blue-300 transition-colors">
-                    IT/Multimedia Staff
+                    IT Staff - Multimedia
                   </h3>
 
                   <p className="text-gray-400 text-xs sm:text-sm lg:text-base mb-3 sm:mb-4 flex-grow leading-relaxed line-clamp-3">
