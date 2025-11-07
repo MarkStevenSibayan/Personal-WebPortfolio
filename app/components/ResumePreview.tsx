@@ -42,12 +42,11 @@ export default function ResumePreview() {
                   </div>
 
                   <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2 sm:mb-3 group-hover:text-blue-300 transition-colors">
-                    IT Staff
+                    IT/Multimedia Staff
                   </h3>
 
                   <p className="text-gray-400 text-xs sm:text-sm lg:text-base mb-3 sm:mb-4 flex-grow leading-relaxed line-clamp-3">
-                    Provide technical support at Globe Maritime Training Center, specializing in hardware maintenance
-                    and network management.
+                    I specialized in photo and video editing, using advanced software to create high-quality multimedia content. Additionally, I diagnosed and resolved hardware and network related issues to ensure smooth operations across various systems and platforms.
                   </p>
 
                   <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">

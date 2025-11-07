@@ -14,11 +14,11 @@ export default function Resume() {
       icon: Briefcase,
       items: [
       {
-          title: "IT Staff",
+          title: "Multimedia Staff",
           place: "Globe Maritime Training Center - Manila Inc.",
           date: "November 3, 2025 - Current",
           description:
-            "As an IT staff member, I was responsible for delivering comprehensive technical support and services, including hardware maintenance, network administration, CCTV system installation, photo and video editing, and diagnosing and resolving hardware-related issues.",
+            "As a Multimedia staff, I specialized in photo and video editing, using advanced software to create high-quality multimedia content. Additionally, I diagnosed and resolved hardware-related issues to ensure smooth operations across various systems and platforms.",
         },
         {
           title: "IT Intern",
