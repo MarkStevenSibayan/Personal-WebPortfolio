@@ -67,20 +67,20 @@ export default function Resume() {
           certificateUrl: "https://drive.google.com/file/d/1q6Qfis8cfmuwNOEwTmLtyIXJcHJ8zBZc/view?usp=sharing",
         },
         {
-          title: " 1st Academic Excellence Award",
-          place: "Pamantasan ng Lungsod ng Valenzuela",
-          date: "March 11, 2021",
-          description:
-            "Commendable effort and achievement as a PLV Senior High School Student GWA of 91.27",
-          certificateUrl: "https://drive.google.com/file/d/1NGc9gTfLuBGvTiirw5gMYuHys6_OlDb8/view?usp=sharing",
-        },
-        {
           title: "2nd Academic Excellence Award",
           place: "Pamantasan ng Lungsod ng Valenzuela",
           date: "March 11, 2021",
           description:
             "Commendable effort and achievement as a PLV Senior High School Student GWA of 93.39",
           certificateUrl: "https://drive.google.com/file/d/1pu9ixg12Vmcd0OPWN2rE0d-1hHxmh3bB/view?usp=sharing",
+        },
+        {
+          title: " 1st Academic Excellence Award",
+          place: "Pamantasan ng Lungsod ng Valenzuela",
+          date: "March 11, 2021",
+          description:
+            "Commendable effort and achievement as a PLV Senior High School Student GWA of 91.27",
+          certificateUrl: "https://drive.google.com/file/d/1NGc9gTfLuBGvTiirw5gMYuHys6_OlDb8/view?usp=sharing",
         },
       ],
     },

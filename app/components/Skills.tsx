@@ -39,12 +39,9 @@ const skills = [
 
   { name: "Technical Support", category: "Technical", icon: Presentation },
   { name: "Hardware Troubleshooting", category: "Technical", icon: Laptop },
-  { name: "Technical Writing", category: "Technical", icon: Presentation },
   { name: "Basic Programming", category: "Technical", icon: Code2 },
   { name: "Networking", category: "Technical", icon: Laptop },
   { name: "Video Editing", category: "Technical", icon: Presentation },
-  { name: "Photo Editing", category: "Technical", icon: Compass },
-  { name: "Photography", category: "Technical", icon: Lightbulb },
   
   { name: "C#", category: "Frontend", icon: Hash },
   { name: "HTML", category: "Frontend", icon: Globe },
