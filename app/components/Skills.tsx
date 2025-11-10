@@ -28,6 +28,24 @@ import {
 } from "lucide-react"
 
 const skills = [
+  { name: "Tech Savvy", category: "Personal", icon: Code2 },
+  { name: "Management Skill", category: "Personal", icon: Compass },
+  { name: "Team Player", category: "Personal", icon: Blocks },
+  { name: "Reliable", category: "Personal", icon: Code2 },
+  { name: "Proactive", category: "Personal", icon: Compass },
+  { name: "Disciplined", category: "Personal", icon: Code2 },
+  { name: "Passionate", category: "Personal", icon: Compass },
+  { name: "Adaptable", category: "Personal", icon: Blocks },
+
+  { name: "Technical Support", category: "Technical", icon: Presentation },
+  { name: "Hardware Troubleshooting", category: "Technical", icon: Laptop },
+  { name: "Technical Writing", category: "Technical", icon: Presentation },
+  { name: "Basic Programming", category: "Technical", icon: Code2 },
+  { name: "Networking", category: "Technical", icon: Laptop },
+  { name: "Video Editing", category: "Technical", icon: Presentation },
+  { name: "Photo Editing", category: "Technical", icon: Compass },
+  { name: "Photography", category: "Technical", icon: Lightbulb },
+  
   { name: "C#", category: "Frontend", icon: Hash },
   { name: "HTML", category: "Frontend", icon: Globe },
   { name: "CSS", category: "Frontend", icon: Palette },
@@ -36,8 +54,10 @@ const skills = [
   { name: "TypeScript", category: "Frontend", icon: FileJson },
   { name: "JavaScript", category: "Frontend", icon: Braces },
   { name: "Tailwind", category: "Frontend", icon: Server },
+
   { name: "Laravel", category: "Backend", icon: Database },
   { name: "Firebase", category: "Backend", icon: Info },
+
   { name: "VSCode", category: "Tools", icon: Laptop },
   { name: "Github", category: "Tools", icon: GithubIcon },
   { name: "Vercel", category: "Tools", icon: Rocket },
@@ -50,19 +70,7 @@ const skills = [
   { name: "Canva", category: "Tools", icon: Lightbulb },
   { name: "Jira", category: "Tools", icon: Compass },
   { name: "Figma", category: "Tools", icon: Figma },
-  { name: "Tech Savvy", category: "Personal", icon: Code2 },
-  { name: "Management Skill", category: "Personal", icon: Compass },
-  { name: "Team Player", category: "Personal", icon: Blocks },
-  { name: "Reliable", category: "Personal", icon: Code2 },
-  { name: "Proactive", category: "Personal", icon: Compass },
-  { name: "Disciplined", category: "Personal", icon: Code2 },
-  { name: "Passionate", category: "Personal", icon: Compass },
-  { name: "Adaptable", category: "Personal", icon: Blocks },
-  { name: "Technical Support", category: "Technical", icon: Presentation },
-  { name: "Hardware Troubleshooting", category: "Technical", icon: Laptop },
-  { name: "Technical Writing", category: "Technical", icon: Presentation },
-  { name: "Basic Programming", category: "Technical", icon: Code2 },
-  { name: "Networking", category: "Technical", icon: Laptop },
+
 ]
 
 const categories = ["Personal", "Technical", "Frontend", "Backend", "Tools"]

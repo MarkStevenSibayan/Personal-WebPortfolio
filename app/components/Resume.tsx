@@ -18,7 +18,7 @@ export default function Resume() {
           place: "Globe Maritime Training Center - Manila Inc.",
           date: "November 3, 2025 - Current",
           description:
-            "As a Multimedia staff, I specialized in photo and video editing, using advanced software to create high-quality multimedia content. Additionally, I diagnosed and resolved hardware-related issues to ensure smooth operations across various systems and platforms.",
+            "As a Multimedia staff, I specialized in photo and video editing, using different software to create high-quality multimedia content. Additionally, I diagnosed and resolved hardware-related issues to ensure smooth operations across various systems and platforms.",
         },
         {
           title: "IT Intern",

@@ -46,7 +46,7 @@ export default function ResumePreview() {
                   </h3>
 
                   <p className="text-gray-400 text-xs sm:text-sm lg:text-base mb-3 sm:mb-4 flex-grow leading-relaxed line-clamp-3">
-                    I specialized in photo and video editing, using advanced software to create high-quality multimedia content. Additionally, I diagnosed and resolved hardware and network related issues to ensure smooth operations across various systems and platforms.
+                    As a Multimedia staff, I specialized in photo and video editing, using different software to create high-quality multimedia content.
                   </p>
 
                   <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
@@ -54,7 +54,7 @@ export default function ResumePreview() {
                       IT Support
                     </span>
                     <span className="px-2 sm:px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-xs font-medium border border-cyan-500/30">
-                      Networking
+                      Multimedia
                     </span>
                   </div>
 
