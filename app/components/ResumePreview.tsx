@@ -56,6 +56,9 @@ export default function ResumePreview() {
                     <span className="px-2 sm:px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-xs font-medium border border-cyan-500/30">
                       Multimedia
                     </span>
+                    <span className="px-2 sm:px-3 py-1 bg-cyan-500/20 text-green-300 rounded-full text-xs font-medium border border-cyan-500/30">
+                      Networking
+                    </span>
                   </div>
 
                   <div className="flex items-center text-blue-400 font-semibold text-xs sm:text-sm">
@@ -104,6 +107,9 @@ export default function ResumePreview() {
                     </span>
                     <span className="px-2 sm:px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full text-xs font-medium border border-pink-500/30">
                       Scrum 101
+                    </span>
+                    <span className="px-2 sm:px-3 py-1 bg-pink-500/20 text-violet-300 rounded-full text-xs font-medium border border-pink-500/30">
+                      Game Dev
                     </span>
                   </div>
 
