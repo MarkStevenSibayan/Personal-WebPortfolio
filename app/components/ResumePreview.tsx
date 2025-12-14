@@ -46,7 +46,7 @@ export default function ResumePreview() {
                   </h3>
 
                   <p className="text-gray-400 text-xs sm:text-sm lg:text-base mb-3 sm:mb-4 flex-grow leading-relaxed line-clamp-3">
-                    As a Multimedia staff, I specialized in photo and video editing, using different software to create high-quality multimedia content.
+                    As an IT staff - Multimedia, I specialized in photo and video editing, as well as expert in hardware, software, and networking
                   </p>
 
                   <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
