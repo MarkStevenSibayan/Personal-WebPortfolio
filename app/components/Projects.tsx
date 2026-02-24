@@ -18,9 +18,8 @@ export default function Projects() {
                 <Image
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="w-full h-full"
+                  fill
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div className="p-4">
