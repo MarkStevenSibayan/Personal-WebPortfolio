@@ -25,6 +25,8 @@ import {
   Info,
   Rocket,
   Figma,
+  Camera,
+  Computer,
 } from "lucide-react"
 
 const skills = [
@@ -37,40 +39,37 @@ const skills = [
   { name: "Passionate", category: "Personal", icon: Compass },
   { name: "Adaptable", category: "Personal", icon: Blocks },
 
-  { name: "Technical Support", category: "Technical", icon: Presentation },
-  { name: "Hardware Troubleshooting", category: "Technical", icon: Laptop },
-  { name: "Basic Programming", category: "Technical", icon: Code2 },
-  { name: "Networking", category: "Technical", icon: Laptop },
+  { name: "Multimedia", category: "Technical", icon: Presentation },
   { name: "Video Editing", category: "Technical", icon: Presentation },
-  
-  { name: "C#", category: "Frontend", icon: Hash },
-  { name: "HTML", category: "Frontend", icon: Globe },
-  { name: "CSS", category: "Frontend", icon: Palette },
-  { name: "React", category: "Frontend", icon: Code2 },
-  { name: "Java", category: "Frontend", icon: FileCode2 },
-  { name: "TypeScript", category: "Frontend", icon: FileJson },
-  { name: "JavaScript", category: "Frontend", icon: Braces },
-  { name: "Tailwind", category: "Frontend", icon: Server },
+  { name: "Videography", category: "Technical", icon: Camera },
+  { name: "Photography", category: "Technical", icon: Camera },
+  { name: "Tech Support", category: "Technical", icon: Presentation },
+  { name: "3D Design", category: "Technical", icon: Lightbulb },
+  { name: "Computer Maintenance", category: "Technical", icon: Laptop },
+  { name: "Hardware Troubleshooting", category: "Technical", icon: Laptop },
+  { name: "Basic Networking", category: "Technical", icon: Computer },
 
-  { name: "Laravel", category: "Backend", icon: Database },
-  { name: "Firebase", category: "Backend", icon: Info },
 
+  { name: "Capcut", category: "Tools", icon: Camera },
+  { name: "Premiere Pro", category: "Tools", icon: Camera },
+  { name: "After Effects", category: "Tools", icon: Camera },
+  { name: "Lightroom Classic", category: "Tools", icon: Camera },
+  { name: "Canva", category: "Tools", icon: Lightbulb },
+  { name: "Word", category: "Tools", icon: Binary },
+  { name: "Excel", category: "Tools", icon: Mail },
+  { name: "Powerpoint", category: "Tools", icon: Presentation },
   { name: "VSCode", category: "Tools", icon: Laptop },
   { name: "Github", category: "Tools", icon: GithubIcon },
   { name: "Vercel", category: "Tools", icon: Rocket },
   { name: "NetBeans", category: "Tools", icon: Folder },
   { name: "Blender", category: "Tools", icon: MonitorSmartphone },
-  { name: "MS Word", category: "Tools", icon: Binary },
-  { name: "MS Excel", category: "Tools", icon: Mail },
-  { name: "MS Powerpoint", category: "Tools", icon: Presentation },
   { name: "Discord", category: "Tools", icon: Mic },
-  { name: "Canva", category: "Tools", icon: Lightbulb },
   { name: "Jira", category: "Tools", icon: Compass },
   { name: "Figma", category: "Tools", icon: Figma },
 
 ]
 
-const categories = ["Personal", "Technical", "Frontend", "Backend", "Tools"]
+const categories = ["Personal", "Technical", "Tools"]
 
 export default function Skills() {
   return (
