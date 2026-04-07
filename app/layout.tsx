@@ -49,7 +49,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/favicon-128x128.png" />
       </head>
-      <body className={`${inter.className} bg-gray-900 text-gray-100 flex flex-col min-h-screen pt-16`}>
+      <body className={`${inter.className} bg-background text-foreground flex flex-col min-h-screen pt-16`}>
         <Navigation />
         <div className="flex-grow max-w-6xl mx-auto px-4 py-8 w-full">{children}</div>
         <Footer />
