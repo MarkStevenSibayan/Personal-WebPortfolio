@@ -19,7 +19,7 @@ export default function FloatingResumeButton() {
     >
       <button
         onClick={() => window.open(resumeUrl, "_blank")}
-        className="group relative bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900"
+        className="group relative bg-accent text-accent-foreground rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background"
         aria-label="View Resume"
       >
         <div className="flex items-center gap-2 px-4 py-3 sm:px-5 sm:py-4">
@@ -40,7 +40,7 @@ export default function FloatingResumeButton() {
         </div>
 
         {/* Subtle pulse animation */}
-        <span className="absolute inset-0 rounded-full bg-blue-400 opacity-0 group-hover:opacity-20 animate-ping"></span>
+        <span className="absolute inset-0 rounded-full bg-accent opacity-0 group-hover:opacity-20 animate-ping"></span>
       </button>
     </motion.div>
   )
