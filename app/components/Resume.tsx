@@ -160,7 +160,7 @@ export default function Resume() {
       transition={{ duration: 0.5 }}
       className="mb-12 max-w-4xl mx-auto px-4"
     >
-      <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+      <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center text-accent">
         My Resume
       </h2>
 
@@ -172,17 +172,17 @@ export default function Resume() {
         className="flex flex-col items-center mb-8 sm:mb-12"
       >
         <div className="relative group">
-          <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-          <div className="relative bg-gray-900 px-6 py-5 sm:px-8 sm:py-6 rounded-lg">
+          <div className="absolute -inset-1 bg-accent rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+          <div className="relative bg-card px-6 py-5 sm:px-8 sm:py-6 rounded-lg border border-border">
             <div className="text-center space-y-3 sm:space-y-4">
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white">View My Full Resume</h3>
-              <p className="text-gray-400 text-xs sm:text-sm lg:text-base max-w-md">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground">View My Full Resume</h3>
+              <p className="text-muted-foreground text-xs sm:text-sm lg:text-base max-w-md">
                 Access my complete professional resume with detailed information about my experience, skills, and
                 qualifications
               </p>
               <Button
                 onClick={() => window.open(resumeUrl, "_blank")}
-                className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-2.5 px-6 sm:py-3 sm:px-8 text-sm sm:text-base lg:text-lg transition-all duration-300 transform hover:scale-105"
+                className="w-full sm:w-auto bg-accent hover:opacity-90 text-accent-foreground font-semibold py-2.5 px-6 sm:py-3 sm:px-8 text-sm sm:text-base lg:text-lg transition-all duration-300 transform hover:scale-105"
               >
                 <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 Open Resume
@@ -200,11 +200,11 @@ export default function Resume() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: sectionIndex * 0.2 }}
-            className="bg-gray-800/50 rounded-lg p-4 sm:p-5 lg:p-6 backdrop-blur-sm scroll-mt-20"
+            className="bg-card/50 rounded-lg p-4 sm:p-5 lg:p-6 backdrop-blur-sm scroll-mt-20 border border-border"
           >
             <div className="flex items-center mb-3 sm:mb-4">
-              <section.icon className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400 mr-2" />
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-blue-400">{section.title}</h3>
+              <section.icon className="w-5 h-5 sm:w-6 sm:h-6 text-accent mr-2" />
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-accent">{section.title}</h3>
             </div>
             <div className="space-y-4 sm:space-y-5 lg:space-y-6">
               {section.items.map((item, index) => (
@@ -213,13 +213,13 @@ export default function Resume() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: sectionIndex * 0.2 + index * 0.1 }}
-                  className="border-l-2 border-blue-400 pl-3 sm:pl-4 space-y-2"
+                  className="border-l-2 border-accent pl-3 sm:pl-4 space-y-2"
                 >
-                  <h4 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-100">{item.title}</h4>
-                  <p className="text-blue-400 text-xs sm:text-sm lg:text-base">{item.place}</p>
-                  <p className="text-xs sm:text-sm text-gray-400">{item.date}</p>
+                  <h4 className="text-sm sm:text-base lg:text-lg font-semibold text-foreground">{item.title}</h4>
+                  <p className="text-accent text-xs sm:text-sm lg:text-base">{item.place}</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">{item.date}</p>
                   {item.description && (
-                    <p className="text-gray-300 text-xs sm:text-sm lg:text-base leading-relaxed">{item.description}</p>
+                    <p className="text-foreground text-xs sm:text-sm lg:text-base leading-relaxed">{item.description}</p>
                   )}
 
                   {/* Display certificate button if available */}
@@ -227,7 +227,7 @@ export default function Resume() {
                     <div className="pt-2">
                       <Button
                         onClick={() => window.open(item.certificateUrl, "_blank")}
-                        className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                        className="w-full sm:w-auto bg-accent hover:opacity-90 text-accent-foreground font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                         size="sm"
                       >
                         <FileCheck className="w-4 h-4 mr-2" />
