@@ -19,12 +19,12 @@ export default function Navigation() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-gray-800 shadow-lg z-50">
+    <nav className="fixed top-0 left-0 right-0 bg-card shadow-lg z-50 border-b border-border">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <Fingerprint size={32} className="text-blue-400" />
-            <span className="ml-2 text-xl font-bold text-white">Sibayan's Portfolio</span>
+            <Fingerprint size={32} className="text-accent" />
+            <span className="ml-2 text-xl font-bold text-foreground">Sibayan's Portfolio</span>
           </div>
           <div className="hidden md:flex space-x-4">
             {navItems.map(({ href, label, icon: Icon }) => (
@@ -32,7 +32,7 @@ export default function Navigation() {
                 key={href}
                 href={href}
                 className={`flex items-center p-2 ${
-                  pathname === href ? "text-blue-400" : "text-gray-400 hover:text-gray-200"
+                  pathname === href ? "text-accent" : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 <Icon size={20} className="mr-1" />
@@ -41,7 +41,7 @@ export default function Navigation() {
             ))}
           </div>
           <div className="md:hidden">
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-white">
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-foreground">
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -54,7 +54,7 @@ export default function Navigation() {
               key={href}
               href={href}
               className={`flex items-center p-4 ${
-                pathname === href ? "text-blue-400" : "text-gray-400 hover:text-gray-200"
+                pathname === href ? "text-accent" : "text-muted-foreground hover:text-foreground"
               }`}
               onClick={() => setIsMenuOpen(false)}
             >
