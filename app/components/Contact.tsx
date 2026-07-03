@@ -165,11 +165,11 @@ export default function Contact() {
           transition={{ delay: 0.1 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-accent">
             Get In Touch
           </h2>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
-            I'm always open to discussing new opportunities, interesting projects, or just having a chat about
+          <p className="text-lg sm:text-xl text-foreground max-w-3xl mx-auto">
+            I&apos;m always open to discussing new opportunities, interesting projects, or just having a chat about
             technology.
           </p>
         </motion.div>
@@ -183,20 +183,20 @@ export default function Contact() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold text-gray-100 mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-6">Contact Information</h3>
               <div className="space-y-6">
                 <motion.div
                   whileHover={{ scale: 1.02 }}
-                  className="flex items-center space-x-4 p-4 bg-gray-800/50 rounded-lg backdrop-blur-sm border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
+                  className="flex items-center space-x-4 p-4 bg-card/50 rounded-lg backdrop-blur-sm border border-border hover:border-accent/50 transition-all duration-300"
                 >
-                  <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-3 rounded-full">
-                    <Mail className="w-6 h-6 text-white" />
+                  <div className="bg-accent p-3 rounded-full">
+                    <Mail className="w-6 h-6 text-accent-foreground" />
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-100">Email</p>
+                    <p className="font-semibold text-foreground">Email</p>
                     <a
                       href="mailto:markstevensibayan11@gmail.com"
-                      className="text-blue-400 hover:text-blue-300 transition-colors"
+                      className="text-accent hover:opacity-80 transition-colors"
                     >
                       markstevensibayan09@gmail.com
                     </a>
@@ -205,14 +205,14 @@ export default function Contact() {
 
                 <motion.div
                   whileHover={{ scale: 1.02 }}
-                  className="flex items-center space-x-4 p-4 bg-gray-800/50 rounded-lg backdrop-blur-sm border border-gray-700/50 hover:border-green-500/50 transition-all duration-300"
+                  className="flex items-center space-x-4 p-4 bg-card/50 rounded-lg backdrop-blur-sm border border-border hover:border-accent/50 transition-all duration-300"
                 >
-                  <div className="bg-gradient-to-r from-green-500 to-green-600 p-3 rounded-full">
-                    <Phone className="w-6 h-6 text-white" />
+                  <div className="bg-accent p-3 rounded-full">
+                    <Phone className="w-6 h-6 text-accent-foreground" />
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-100">Phone</p>
-                    <a href="tel:+639944105573" className="text-green-400 hover:text-green-300 transition-colors">
+                    <p className="font-semibold text-foreground">Phone</p>
+                    <a href="tel:+639944105573" className="text-accent hover:opacity-80 transition-colors">
                       +63 9944105573
                     </a>
                   </div>
@@ -220,14 +220,14 @@ export default function Contact() {
 
                 <motion.div
                   whileHover={{ scale: 1.02 }}
-                  className="flex items-center space-x-4 p-4 bg-gray-800/50 rounded-lg backdrop-blur-sm border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300"
+                  className="flex items-center space-x-4 p-4 bg-card/50 rounded-lg backdrop-blur-sm border border-border hover:border-accent/50 transition-all duration-300"
                 >
-                  <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-3 rounded-full">
-                    <MapPin className="w-6 h-6 text-white" />
+                  <div className="bg-accent p-3 rounded-full">
+                    <MapPin className="w-6 h-6 text-accent-foreground" />
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-100">Location</p>
-                    <p className="text-gray-300">Valenzuela City, NCR, Philippines</p>
+                    <p className="font-semibold text-foreground">Location</p>
+                    <p className="text-muted-foreground">Valenzuela City, NCR, Philippines</p>
                   </div>
                 </motion.div>
               </div>
@@ -237,16 +237,16 @@ export default function Contact() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="bg-gray-800/50 p-6 rounded-lg backdrop-blur-sm border border-gray-700/50"
+              className="bg-card/50 p-6 rounded-lg backdrop-blur-sm border border-border"
             >
-              <h3 className="text-2xl font-bold text-gray-100 mb-4">Let's Connect!</h3>
-              <p className="text-gray-300 mb-6">
-                Whether you have a project in mind, want to collaborate, or just want to say hello, I'd love to hear
+              <h3 className="text-2xl font-bold text-foreground mb-4">Let&apos;s Connect!</h3>
+              <p className="text-muted-foreground mb-6">
+                Whether you have a project in mind, want to collaborate, or just want to say hello, I&apos;d love to hear
                 from you. Feel free to reach out through any of the channels above or use the contact form.
               </p>
-              <div className="bg-blue-500/10 p-4 rounded-lg border border-blue-500/20">
-                <h4 className="font-semibold text-blue-400 mb-2">Response Time</h4>
-                <p className="text-gray-300 text-sm">
+              <div className="bg-accent/10 p-4 rounded-lg border border-accent/20">
+                <h4 className="font-semibold text-accent mb-2">Response Time</h4>
+                <p className="text-muted-foreground text-sm">
                   I typically respond to messages within 24 hours during weekdays.
                 </p>
               </div>
@@ -258,9 +258,9 @@ export default function Contact() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
-            className="bg-gray-800/50 p-6 sm:p-8 rounded-lg backdrop-blur-sm border border-gray-700/50"
+            className="bg-card/50 p-6 sm:p-8 rounded-lg backdrop-blur-sm border border-border"
           >
-            <h3 className="text-2xl font-bold text-gray-100 mb-6">Send a Message</h3>
+            <h3 className="text-2xl font-bold text-foreground mb-6">Send a Message</h3>
 
             {submitStatus.type && (
               <motion.div
@@ -270,7 +270,7 @@ export default function Contact() {
                   submitStatus.type === "success"
                     ? "bg-green-500/10 text-green-400 border-green-500/20"
                     : submitStatus.type === "demo"
-                      ? "bg-blue-500/10 text-blue-400 border-blue-500/20"
+                      ? "bg-accent/10 text-accent border-accent/20"
                       : "bg-red-500/10 text-red-400 border-red-500/20"
                 }`}
               >
@@ -287,7 +287,7 @@ export default function Contact() {
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2 flex items-center">
+                <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2 flex items-center">
                   <User className="w-4 h-4 mr-2" />
                   Full Name *
                 </label>
@@ -300,13 +300,13 @@ export default function Contact() {
                   required
                   minLength={2}
                   maxLength={100}
-                  className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-100 placeholder-gray-400"
+                  className="w-full px-4 py-3 bg-secondary/50 border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-foreground placeholder-muted-foreground"
                   placeholder="Your full name"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2 flex items-center">
+                <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2 flex items-center">
                   <Mail className="w-4 h-4 mr-2" />
                   Email Address *
                 </label>
@@ -318,13 +318,13 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   maxLength={100}
-                  className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-100 placeholder-gray-400"
+                  className="w-full px-4 py-3 bg-secondary/50 border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-foreground placeholder-muted-foreground"
                   placeholder="your.email@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2 flex items-center">
+                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2 flex items-center">
                   <MessageSquare className="w-4 h-4 mr-2" />
                   Message *
                 </label>
@@ -337,7 +337,7 @@ export default function Contact() {
                   minLength={10}
                   maxLength={1000}
                   rows={6}
-                  className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-vertical text-gray-100 placeholder-gray-400"
+                  className="w-full px-4 py-3 bg-secondary/50 border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 resize-vertical text-foreground placeholder-muted-foreground"
                   placeholder="Tell me about your project or just say hello..."
                 />
               </div>
@@ -347,7 +347,7 @@ export default function Contact() {
                 disabled={isSubmitting}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                className="w-full bg-accent text-accent-foreground py-3 px-6 rounded-lg hover:opacity-90 focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 font-semibold"
               >
                 {isSubmitting ? (
                   <>
