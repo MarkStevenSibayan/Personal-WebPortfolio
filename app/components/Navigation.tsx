@@ -2,64 +2,83 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Home, Code, Menu, X, Briefcase, Mail } from "lucide-react"
-import { Fingerprint } from "lucide-react"
-import { useState } from "react"
+import { Menu, X } from "lucide-react"
+import { useState, useEffect } from "react"
 
 export default function Navigation() {
   const pathname = usePathname()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   const navItems = [
-    { href: "/", label: "Home", icon: Home },
-    { href: "/projects", label: "Projects", icon: Briefcase },
-    { href: "/skills", label: "Skills", icon: Code },
-    { href: "/resume", label: "Resume", icon: Briefcase },
-    { href: "/contact", label: "Contact", icon: Mail },
+    { href: "/", label: "Home" },
+    { href: "/projects", label: "Projects" },
+    { href: "/skills", label: "Skills" },
+    { href: "/resume", label: "Resume" },
+    { href: "/contact", label: "Contact" },
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-card shadow-lg z-50 border-b border-border">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-card/95 backdrop-blur-md shadow-lg border-b border-border/50" : "bg-transparent"
+      }`}
+    >
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center">
-            <Fingerprint size={32} className="text-accent" />
-            <span className="ml-2 text-xl font-bold text-foreground">Sibayan's Portfolio</span>
-          </div>
-          <div className="hidden md:flex space-x-4">
-            {navItems.map(({ href, label, icon: Icon }) => (
+          <Link href="/" className="flex items-center group">
+            <span className="text-lg font-semibold text-foreground tracking-tight">MSB</span>
+            <div className="hidden sm:block ml-1 text-xs text-muted-foreground group-hover:text-accent transition-colors">
+              Portfolio
+            </div>
+          </Link>
+          <div className="hidden md:flex items-center space-x-1">
+            {navItems.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
-                className={`flex items-center p-2 ${
-                  pathname === href ? "text-accent" : "text-muted-foreground hover:text-foreground"
+                className={`px-3 py-2 text-sm font-medium transition-all duration-200 rounded-md ${
+                  pathname === href
+                    ? "text-accent bg-accent/10"
+                    : "text-muted-foreground hover:text-foreground hover:bg-card/50"
                 }`}
               >
-                <Icon size={20} className="mr-1" />
-                <span>{label}</span>
+                {label}
               </Link>
             ))}
           </div>
           <div className="md:hidden">
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-foreground">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-foreground p-2 hover:bg-card/50 rounded-md transition-colors"
+            >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden">
-          {navItems.map(({ href, label, icon: Icon }) => (
+        <div className="md:hidden bg-card/95 backdrop-blur-md border-t border-border/50">
+          {navItems.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
-              className={`flex items-center p-4 ${
-                pathname === href ? "text-accent" : "text-muted-foreground hover:text-foreground"
+              className={`block px-4 py-3 text-sm font-medium transition-all duration-200 ${
+                pathname === href
+                  ? "text-accent bg-accent/10 border-l-2 border-accent"
+                  : "text-muted-foreground hover:text-foreground hover:bg-card"
               }`}
               onClick={() => setIsMenuOpen(false)}
             >
-              <Icon size={20} className="mr-2" />
-              <span>{label}</span>
+              {label}
             </Link>
           ))}
         </div>

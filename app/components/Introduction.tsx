@@ -1,30 +1,56 @@
 import Image from "next/image"
-import { Code, Fingerprint } from "lucide-react"
 
 export default function Introduction() {
   return (
-    <section className="mb-12 text-center px-4">
-      <div className="relative w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-8 sm:mb-12">
-        <div className="absolute inset-0 bg-accent rounded-full animate-pulse"></div>
-        <Image
-          src="/images/design-mode/profile.jpg"
-          alt="Mark Steven B. Sibayan"
-          width={160}
-          height={160}
-          className="rounded-full border-4 border-foreground shadow-lg object-cover z-10 relative w-full h-full"
-          priority
-        />
-        <div className="absolute -bottom-2 -right-2 bg-accent text-accent-foreground rounded-full p-1.5 shadow-lg z-20">
-          <Fingerprint size={16} className="sm:w-5 sm:h-5" />
+    <section className="py-16 sm:py-24 text-center px-4 relative">
+      {/* Subtle green glow background */}
+      <div className="absolute inset-0 -top-40 pointer-events-none overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-b from-accent/15 via-transparent to-transparent rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="relative z-10">
+        {/* Profile Image with subtle glow */}
+        <div className="relative w-28 h-28 sm:w-36 sm:h-36 mx-auto mb-8 sm:mb-12">
+          <div className="absolute inset-0 bg-gradient-to-b from-accent/20 to-transparent rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <Image
+            src="/images/design-mode/profile.jpg"
+            alt="Mark Steven B. Sibayan"
+            width={144}
+            height={144}
+            className="rounded-full border border-accent/30 shadow-lg object-cover w-full h-full"
+            priority
+          />
+        </div>
+
+        {/* Headings with green accent */}
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-3 text-foreground tracking-tight">
+          Mark Steven B. Sibayan
+        </h1>
+        <p className="text-base sm:text-lg text-accent font-medium mb-6">
+          Information Technology Student & Developer
+        </p>
+
+        {/* Bio */}
+        <p className="max-w-2xl mx-auto text-foreground/90 text-sm sm:text-base leading-relaxed mb-8">
+          4th-year IT student at Pamantasan ng Lungsod ng Valenzuela (PLV), passionate about technology and creative solutions. Experienced in hardware troubleshooting, networking, programming, and multimedia production.
+        </p>
+
+        {/* CTA Button */}
+        <div className="flex justify-center gap-4 flex-wrap">
+          <a
+            href="#projects"
+            className="px-6 py-2.5 bg-gradient-to-r from-accent to-green-600 text-accent-foreground font-medium rounded-lg hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 text-sm sm:text-base"
+          >
+            View My Work
+          </a>
+          <a
+            href="#contact"
+            className="px-6 py-2.5 border border-accent/50 text-accent font-medium rounded-lg hover:bg-accent/10 transition-all duration-300 text-sm sm:text-base"
+          >
+            Get In Touch
+          </a>
         </div>
       </div>
-      <h1 className="text-3xl sm:text-4xl font-bold mb-2 text-accent">
-        Mark Steven B. Sibayan
-      </h1>
-      <p className="text-lg sm:text-xl text-muted-foreground mb-4">Bachelor of Science in Information Technology</p>
-      <p className="max-w-2xl mx-auto text-foreground text-sm sm:text-base">
-        I am a 4th-year IT student at Pamantasan ng Lungsod ng Valenzuela (PLV) 22 years old passionate about technology and related skills. Skilled in hardware troubleshooting, networking, basic programming, and video editing.
-      </p>
     </section>
   )
 }
