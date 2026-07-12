@@ -42,4 +42,11 @@ export const graphicDesigns: GraphicDesign[] = [
     category: "landscape",
     image: "/images/projects/tesda-banner.png",
   },
+  {
+    id: "design-6",
+    title: "WorldSkills Achievement Poster",
+    description: "Professional certificate and achievement poster celebrating a silver award winner from the WorldSkills competition in automotive technology",
+    category: "landscape",
+    image: "/images/projects/worldskills-poster.png",
+  },
 ]
