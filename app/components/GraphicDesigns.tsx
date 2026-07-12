@@ -17,9 +17,9 @@ export default function GraphicDesigns() {
         </div>
 
         {/* Design Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-max">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-max">
           {topDesigns.map((design) => (
-            <Link href={`/projects#graphic-designs`} key={design.id} className={`group ${design.category === "landscape" ? "col-span-1 md:col-span-2" : ""}`}>
+            <Link href={`/projects#graphic-designs`} key={design.id} className="group">
               <div className="bg-card rounded-2xl overflow-hidden transition-all duration-300 border border-border/60 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/10 h-full flex flex-col">
                 {/* Image Container - Responsive aspect ratio */}
                 <div 

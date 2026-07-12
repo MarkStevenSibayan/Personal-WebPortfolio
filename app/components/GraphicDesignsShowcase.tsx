@@ -58,12 +58,12 @@ export default function GraphicDesignsShowcase() {
           </button>
         </div>
 
-        {/* Designs Grid - Responsive layout with landscape/portrait cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-max">
+        {/* Designs Grid - 2-column responsive layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-max">
           {filteredDesigns.map((design) => (
             <div
               key={design.id}
-              className={`group bg-card rounded-2xl overflow-hidden transition-all duration-300 border border-border/60 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/10 h-full flex flex-col ${design.category === "landscape" ? "col-span-1 md:col-span-2" : ""}`}
+              className="group bg-card rounded-2xl overflow-hidden transition-all duration-300 border border-border/60 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/10 h-full flex flex-col"
             >
               {/* Image Container - Responsive aspect ratio based on category */}
               <div 
