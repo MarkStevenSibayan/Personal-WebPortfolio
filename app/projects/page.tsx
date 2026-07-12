@@ -24,6 +24,12 @@ export default function ProjectsPage() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
+
+      {/* Graphic Designs Showcase */}
+      <div className="mt-16">
+        <GraphicDesignsShowcase />
+      </div>
+
       <h1 className="text-3xl sm:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
         My Projects
       </h1>
@@ -77,10 +83,7 @@ export default function ProjectsPage() {
         ))}
       </div>
 
-      {/* Graphic Designs Showcase */}
-      <div className="mt-16">
-        <GraphicDesignsShowcase />
-      </div>
+
 
       {/* 3D Animation Showcase */}
       <div className="mt-16">

@@ -3,7 +3,7 @@ import Link from "next/link"
 import { graphicDesigns } from "../data/graphicDesigns"
 
 export default function GraphicDesigns() {
-  const topDesigns = graphicDesigns.slice(0, 3)
+  const topDesigns = graphicDesigns.slice(0, 2)
 
   return (
     <section className="py-16 sm:py-24 px-4" id="graphic-designs">
