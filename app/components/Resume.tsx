@@ -18,7 +18,7 @@ export default function Resume() {
           place: "Globe Maritime Training Center - Manila Inc.",
           date: "November 3, 2025 - Current",
           description:
-            "As a Multimedia staff, I specialized in photography and videography, as well as editing, using different software to create high-quality multimedia content for the company marketing. Additionally, I am skilled with hardware and software troubleshooting and knowledgeable with basic networking.",
+            "As a Multimedia staff, I specialized in photography and videography, as well as editing, using different software to create high-quality multimedia content for the company marketing. Additionally, I am skilled with hardware and software troubleshooting and knowledgeable with networking.",
         },
         {
           title: "IT Support - Intern",
@@ -153,7 +153,7 @@ export default function Resume() {
         {
           title: "College",
           place: "Pamantasan ng Lungsod ng Valenzuela",
-          date: "2022 - Present",
+          date: "2022 - 2026",
           description: "Bachelor of Science and Information Technology (BSIT) student",
         },
       ],

@@ -4,6 +4,7 @@ import { useEffect } from "react"
 import Image from "next/image"
 import { Folder } from "lucide-react"
 import { projects } from "../data/projects"
+import GraphicDesignsShowcase from "../components/GraphicDesignsShowcase"
 
 export default function ProjectsPage() {
   useEffect(() => {
@@ -74,6 +75,11 @@ export default function ProjectsPage() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Graphic Designs Showcase */}
+      <div className="mt-16">
+        <GraphicDesignsShowcase />
       </div>
 
       {/* 3D Animation Showcase */}
