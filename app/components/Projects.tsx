@@ -12,7 +12,7 @@ export default function Projects() {
         <div className="mb-12 sm:mb-16">
           <p className="text-accent text-sm font-semibold uppercase tracking-widest mb-2">Featured Work</p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
-            Selected Projects
+            Top 3 Projects
           </h2>
         </div>
 

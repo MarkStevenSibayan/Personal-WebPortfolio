@@ -13,7 +13,7 @@ export default function Resume() {
       title: "Work Experience",
       icon: Briefcase,
       items: [
-      {
+        {
           title: "IT Staff - Multimedia",
           place: "Globe Maritime Training Center - Manila Inc.",
           date: "November 3, 2025 - Current",
@@ -21,11 +21,18 @@ export default function Resume() {
             "As a Multimedia staff, I specialized in photography and videography, as well as editing, using different software to create high-quality multimedia content for the company marketing. Additionally, I am skilled with hardware and software troubleshooting and knowledgeable with basic networking.",
         },
         {
-          title: "IT Intern",
+          title: "IT Support - Intern",
           place: "Globe Maritime Training Center - Manila Inc.",
           date: "July 14, 2025 - October 17, 2025",
           description:
             "As an IT intern, I provided technical support and assistance, which included maintaining computer hardware, managing networks infrastructure, installing CCTV systems, and performing photo and video editing tasks.",
+        },
+        {
+          title: "Records Management Intern",
+          place: "Pamantasan ng Lungsod ng Valenzuela",
+          date: "June 2026 - July 2025",
+          description:
+            "As a record management intern, I digitized student records by scanning, organizing, and uploading physical documents, improving accessibility and record management.",
         },
       ],
     },
@@ -90,22 +97,9 @@ export default function Resume() {
       icon: Award,
       items: [
         {
-          title: "Quiz Bee District Level 5th Place",
-          place: "Wawang Pulo National High School",
-          date: "2019-2020",
-          description: "5th Place in Science Quiz Bee during grade 10",
-        },
-        {
-          title: "MTOP 8th Place",
-          place: "Wawang Pulo National High School",
-          date: "2019-2020",
-          description: "8th Place in MTOP during grade 10",
-        },
-        {
-          title: "With Honor",
-          place: "Wawang Pulo National High School",
-          date: "2015-2020",
-          description: "",
+          title: "Dean's Lister",
+          place: "Pamantasan ng Lungsod ng Valenzuela",
+          date: "2022-2023",
         },
         {
           title: "With Honor",
@@ -114,9 +108,22 @@ export default function Resume() {
           description: "Senior High Graduation as a STEM student",
         },
         {
-          title: "Dean's Lister",
-          place: "Pamantasan ng Lungsod ng Valenzuela",
-          date: "2022-2023",
+          title: "With Honor",
+          place: "Wawang Pulo National High School",
+          date: "2015-2020",
+          description: "",
+        },
+        {
+          title: "MTOP 8th Place",
+          place: "Wawang Pulo National High School",
+          date: "2019-2020",
+          description: "8th Place in MTOP during grade 10",
+        },
+        {
+          title: "Quiz Bee District Level 5th Place",
+          place: "Wawang Pulo National High School",
+          date: "2019-2020",
+          description: "5th Place in Science Quiz Bee during grade 10",
         },
       ],
     },
