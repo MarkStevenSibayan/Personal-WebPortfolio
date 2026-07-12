@@ -63,7 +63,7 @@ export default function GraphicDesignsShowcase() {
           {filteredDesigns.map((design) => (
             <div
               key={design.id}
-              className="group bg-card rounded-2xl overflow-hidden transition-all duration-300 border border-border/60 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/10 h-full flex flex-col"
+              className={`group bg-card rounded-2xl overflow-hidden transition-all duration-300 border border-border/60 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/10 h-full flex flex-col ${design.category === "landscape" ? "col-span-1 md:col-span-2" : ""}`}
             >
               {/* Image Container - Responsive aspect ratio based on category */}
               <div 
