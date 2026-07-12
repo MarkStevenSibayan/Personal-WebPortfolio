@@ -34,7 +34,7 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="flex items-center group">
-            <span className="text-lg font-semibold text-foreground tracking-tight">Mr.S</span>
+            <span className="text-lg font-semibold text-foreground tracking-tight">Mr.Sibayan</span>
             <div className="hidden sm:block ml-1 text-xs text-muted-foreground group-hover:text-accent transition-colors">
               Portfolio
             </div>
