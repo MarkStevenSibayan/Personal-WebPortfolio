@@ -153,7 +153,7 @@ export default function Resume() {
         {
           title: "College",
           place: "Pamantasan ng Lungsod ng Valenzuela",
-          date: "2022 - Present",
+          date: "2022 - 2026",
           description: "Bachelor of Science and Information Technology (BSIT) student",
         },
       ],
