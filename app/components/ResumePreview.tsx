@@ -15,7 +15,7 @@ export default function ResumePreview() {
             Experience & Credentials
           </h2>
           <p className="text-muted-foreground text-base max-w-2xl">
-            Explore my professional background and industry certifications
+            Explore my professional background
           </p>
         </div>
 
