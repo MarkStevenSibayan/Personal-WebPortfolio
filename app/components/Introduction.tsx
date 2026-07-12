@@ -27,7 +27,7 @@ export default function Introduction() {
           Mark Steven B. Sibayan
         </h1>
         <p className="text-base sm:text-lg text-accent font-medium mb-6">
-          Multimedia
+          Information Technology - Multimedia
         </p>
 
         {/* Bio */}

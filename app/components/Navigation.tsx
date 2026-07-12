@@ -28,14 +28,13 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-card/95 backdrop-blur-md shadow-lg border-b border-border/50" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-card/95 backdrop-blur-md shadow-lg border-b border-border/50" : "bg-transparent"
+        }`}
     >
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="flex items-center group">
-            <span className="text-lg font-semibold text-foreground tracking-tight">MSB</span>
+            <span className="text-lg font-semibold text-foreground tracking-tight">Mr.S</span>
             <div className="hidden sm:block ml-1 text-xs text-muted-foreground group-hover:text-accent transition-colors">
               Portfolio
             </div>
@@ -45,11 +44,10 @@ export default function Navigation() {
               <Link
                 key={href}
                 href={href}
-                className={`px-3 py-2 text-sm font-medium transition-all duration-200 rounded-md ${
-                  pathname === href
+                className={`px-3 py-2 text-sm font-medium transition-all duration-200 rounded-md ${pathname === href
                     ? "text-accent bg-accent/10"
                     : "text-muted-foreground hover:text-foreground hover:bg-card/50"
-                }`}
+                  }`}
               >
                 {label}
               </Link>
@@ -71,11 +69,10 @@ export default function Navigation() {
             <Link
               key={href}
               href={href}
-              className={`block px-4 py-3 text-sm font-medium transition-all duration-200 ${
-                pathname === href
+              className={`block px-4 py-3 text-sm font-medium transition-all duration-200 ${pathname === href
                   ? "text-accent bg-accent/10 border-l-2 border-accent"
                   : "text-muted-foreground hover:text-foreground hover:bg-card"
-              }`}
+                }`}
               onClick={() => setIsMenuOpen(false)}
             >
               {label}
