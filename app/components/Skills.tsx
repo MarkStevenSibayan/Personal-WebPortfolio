@@ -37,11 +37,18 @@ const skills = [
   { name: "Passionate", category: "Personal", icon: Compass },
   { name: "Adaptable", category: "Personal", icon: Blocks },
 
-  { name: "Technical Support", category: "Technical", icon: Presentation },
-  { name: "Hardware Troubleshooting", category: "Technical", icon: Laptop },
-  { name: "Basic Programming", category: "Technical", icon: Code2 },
-  { name: "Networking", category: "Technical", icon: Laptop },
-  { name: "Video Editing", category: "Technical", icon: Presentation },
+  { name: "Multimedia", category: "Technical", icon: Presentation },
+  { name: "Photography", category: "Technical", icon: Laptop },
+  { name: "Videography", category: "Technical", icon: Compass },
+  { name: "Video & Photo Editing", category: "Technical", icon: Laptop },
+  { name: "Graphic Design", category: "Technical", icon: Globe },
+  { name: "Hardware troubleshooting & maintenance", category: "Technical", icon: Lightbulb },
+  { name: "Networking", category: "Technical", icon: Rocket },
+  { name: "3D Design", category: "Technical", icon: Info },
+  { name: "Drone pilot", category: "Technical", icon: Binary },
+  { name: "CCTV installation", category: "Technical", icon: Database },
+  { name: "Computer setup", category: "Technical", icon: Hash },
+  { name: "Technical Support", category: "Technical", icon: Mic },
   
   { name: "C#", category: "Frontend", icon: Hash },
   { name: "HTML", category: "Frontend", icon: Globe },
@@ -51,9 +58,6 @@ const skills = [
   { name: "TypeScript", category: "Frontend", icon: FileJson },
   { name: "JavaScript", category: "Frontend", icon: Braces },
   { name: "Tailwind", category: "Frontend", icon: Server },
-
-  { name: "Laravel", category: "Backend", icon: Database },
-  { name: "Firebase", category: "Backend", icon: Info },
 
   { name: "VSCode", category: "Tools", icon: Laptop },
   { name: "Github", category: "Tools", icon: GithubIcon },
@@ -70,7 +74,7 @@ const skills = [
 
 ]
 
-const categories = ["Personal", "Technical", "Frontend", "Backend", "Tools"]
+const categories = ["Personal", "Technical", "Frontend", "Tools"]
 
 export default function Skills() {
   return (
