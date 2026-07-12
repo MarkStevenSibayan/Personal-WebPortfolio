@@ -67,8 +67,8 @@ export default function GraphicDesignsShowcase() {
             >
               {/* Image Container - Responsive aspect ratio based on category */}
               <div 
-                className={`relative overflow-hidden bg-secondary/30 flex-1 ${
-                  design.category === "landscape" ? "aspect-video" : "aspect-[3/4]"
+                className={`relative overflow-hidden bg-secondary/30 ${
+                  design.category === "landscape" ? "aspect-[16/6]" : "aspect-[3/4]"
                 }`}
               >
                 <Image
@@ -82,16 +82,16 @@ export default function GraphicDesignsShowcase() {
               </div>
 
               {/* Content */}
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors">
+              <div className="p-3 sm:p-4">
+                <div className="flex items-center justify-between gap-2 mb-1">
+                  <h3 className="text-base font-semibold text-foreground group-hover:text-accent transition-colors truncate">
                     {design.title}
                   </h3>
-                  <span className="text-xs font-semibold uppercase tracking-widest text-accent bg-accent/10 px-3 py-1 rounded-full whitespace-nowrap">
+                  <span className="text-xs font-semibold uppercase tracking-widest text-accent bg-accent/10 px-2 py-0.5 rounded-full whitespace-nowrap">
                     {design.category}
                   </span>
                 </div>
-                <p className="text-muted-foreground text-sm leading-relaxed">{design.description}</p>
+                <p className="text-muted-foreground text-xs leading-relaxed line-clamp-2">{design.description}</p>
               </div>
             </div>
           ))}
