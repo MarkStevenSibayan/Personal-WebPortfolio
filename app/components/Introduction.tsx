@@ -27,12 +27,12 @@ export default function Introduction() {
           Mark Steven B. Sibayan
         </h1>
         <p className="text-base sm:text-lg text-accent font-medium mb-6">
-          Information Technology Student & Developer
+          Multimedia
         </p>
 
         {/* Bio */}
         <p className="max-w-2xl mx-auto text-foreground/90 text-sm sm:text-base leading-relaxed mb-8">
-          4th-year IT student at Pamantasan ng Lungsod ng Valenzuela (PLV), passionate about technology and creative solutions. Experienced in hardware troubleshooting, networking, programming, and multimedia production.
+          I am a motivated IT professional with a strong passion for technology and continuous learning. I have developed skills in technical support, computer hardware/software, multimedia, and team collaboration through academic and practical experiences. I am eager to apply my knowledge in a professional environment, enhance my technical expertise, and adapt to emerging technologies.
         </p>
 
         {/* CTA Button */}
@@ -44,7 +44,7 @@ export default function Introduction() {
             View My Work
           </a>
           <a
-            href="#contact"
+            href="contact"
             className="px-6 py-2.5 border border-accent/50 text-accent font-medium rounded-lg hover:bg-accent/10 transition-all duration-300 text-sm sm:text-base"
           >
             Get In Touch
