@@ -17,12 +17,16 @@ export default function GraphicDesigns() {
         </div>
 
         {/* Design Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-max">
           {topDesigns.map((design) => (
             <Link href={`/projects#graphic-designs`} key={design.id} className="group">
-              <div className="bg-card rounded-2xl overflow-hidden transition-all duration-300 border border-border/60 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/10">
-                {/* Image Container */}
-                <div className="relative h-48 sm:h-56 overflow-hidden bg-secondary/30">
+              <div className="bg-card rounded-2xl overflow-hidden transition-all duration-300 border border-border/60 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/10 h-full flex flex-col">
+                {/* Image Container - Responsive aspect ratio */}
+                <div 
+                  className={`relative overflow-hidden bg-secondary/30 flex-1 ${
+                    design.category === "landscape" ? "aspect-video" : "aspect-[3/4]"
+                  }`}
+                >
                   <Image
                     src={design.image}
                     alt={design.title}

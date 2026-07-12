@@ -9,8 +9,8 @@ export default function Home() {
     <main>
       <Introduction />
       <ResumePreview />
-      <Projects />
       <GraphicDesigns />
+      <Projects />
       <FloatingResumeButton />
     </main>
   )
