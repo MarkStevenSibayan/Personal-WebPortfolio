@@ -32,7 +32,7 @@ export default function Introduction() {
 
         {/* Bio */}
         <p className="max-w-2xl mx-auto text-foreground/90 text-sm sm:text-base leading-relaxed mb-8">
-          I am an IT professional with a strong passion for technology and continuous learning. I have developed skills in technical support, computer hardware/software, multimedia, and team collaboration through academic and practical experiences. I am eager to apply my knowledge in a professional environment, enhance my technical expertise, and adapt to emerging technologies.
+          I am an IT professional with a strong passion for technology and continuous learning. I have developed skills in multimedia, technical support, computer hardware/software, and team collaboration through academic and practical experiences. I am eager to apply my knowledge in a professional environment, enhance my technical expertise, and adapt to emerging technologies.
         </p>
 
         {/* CTA Button */}
