@@ -42,6 +42,14 @@ export default function Resume() {
       icon: Certificate,
       items: [
         {
+          title: "Creator to Leader: The Future of Responsible Digital Creators,",
+          place: "ALERT Multi-purpose Hall",
+          date: "March 16, 2026",
+          description:
+            "This certificate is awarded in recognition of their engagement and commitment to learning, creativity, and responsible digital leadership.",
+          certificateUrl: "https://drive.google.com/file/d/1HzJO3GAB4PYRi4QS-Uc_iHwDNBUo3q-p/view?usp=drive_link",
+        },
+        {
           title: "Certificate of Completion: On the Job Training",
           place: "Globe Maritime Training Center - Manila Inc.",
           date: "October 17, 2025",
