@@ -190,7 +190,7 @@ export default function Resume() {
           <div className="absolute -inset-1 bg-accent rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
           <div className="relative bg-card px-6 py-5 sm:px-8 sm:py-6 rounded-lg border border-border">
             <div className="text-center space-y-3 sm:space-y-4">
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground">View My Full Resume</h3>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground">View My Resume</h3>
               <p className="text-muted-foreground text-xs sm:text-sm lg:text-base max-w-md">
                 Access my complete professional resume with detailed information about my experience, skills, and
                 qualifications
