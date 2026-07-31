@@ -42,7 +42,7 @@ export default function Resume() {
       icon: Certificate,
       items: [
         {
-          title: "Creator to Leader: The Future of Responsible Digital Creators,",
+          title: "Creator to Leader: The Future of Responsible Digital Creators",
           place: "ALERT Multi-purpose Hall",
           date: "March 16, 2026",
           description:
