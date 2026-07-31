@@ -104,6 +104,9 @@ export default function ResumePreview() {
 
                   <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
                     <span className="px-2 sm:px-3 py-1 bg-accent/20 text-accent rounded-full text-xs font-medium border border-accent/30">
+                      Digital Creation
+                    </span>
+                    <span className="px-2 sm:px-3 py-1 bg-accent/20 text-accent rounded-full text-xs font-medium border border-accent/30">
                       Data Privacy
                     </span>
                     <span className="px-2 sm:px-3 py-1 bg-accent/20 text-accent rounded-full text-xs font-medium border border-accent/30">
