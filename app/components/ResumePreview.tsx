@@ -98,7 +98,7 @@ export default function ResumePreview() {
                   </h3>
 
                   <p className="text-muted-foreground text-xs sm:text-sm lg:text-base mb-3 sm:mb-4 flex-grow leading-relaxed line-clamp-3">
-                    Certified in Data Privacy, Scrum methodologies, and Game Development from Pamantasan ng Lungsod ng
+                    Certified in Digital Creation, Data Privacy, Scrum 101, and Game Development from Pamantasan ng Lungsod ng
                     Valenzuela.
                   </p>
 
