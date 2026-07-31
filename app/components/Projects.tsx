@@ -17,10 +17,10 @@ export default function Projects() {
         </div>
 
         {/* Project Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 sm:mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 sm:mb-20 auto-rows-max">
           {previewProjects.map((project) => (
             <Link href={`/projects#${project.id}`} key={project.id} className="group">
-              <div className="bg-card rounded-2xl overflow-hidden transition-all duration-300 border border-border/60 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/10">
+              <div className="h-full bg-card rounded-2xl overflow-hidden transition-all duration-300 border border-border/60 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/10 flex flex-col">
                 {/* Image Container */}
                 <div className="relative h-48 sm:h-56 overflow-hidden bg-secondary/30">
                   <Image
@@ -34,12 +34,12 @@ export default function Projects() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
+                <div className="p-6 flex-1 flex flex-col">
                   <h3 className="text-lg font-semibold text-foreground mb-1 group-hover:text-accent transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-accent text-sm font-medium mb-3">{project.role}</p>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{project.description}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed flex-1">{project.description}</p>
                 </div>
               </div>
             </Link>
