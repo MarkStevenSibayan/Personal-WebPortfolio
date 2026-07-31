@@ -42,6 +42,14 @@ export default function Resume() {
       icon: Certificate,
       items: [
         {
+          title: "Creator to Leader: The Future of Responsible Digital Creators",
+          place: "ALERT Multi-purpose Hall",
+          date: "March 16, 2026",
+          description:
+            "This certificate is awarded in recognition of their engagement and commitment to learning, creativity, and responsible digital leadership.",
+          certificateUrl: "https://drive.google.com/file/d/1HzJO3GAB4PYRi4QS-Uc_iHwDNBUo3q-p/view?usp=drive_link",
+        },
+        {
           title: "Certificate of Completion: On the Job Training",
           place: "Globe Maritime Training Center - Manila Inc.",
           date: "October 17, 2025",
@@ -182,9 +190,9 @@ export default function Resume() {
           <div className="absolute -inset-1 bg-accent rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
           <div className="relative bg-card px-6 py-5 sm:px-8 sm:py-6 rounded-lg border border-border">
             <div className="text-center space-y-3 sm:space-y-4">
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground">View My Full Resume</h3>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground">View My Resume</h3>
               <p className="text-muted-foreground text-xs sm:text-sm lg:text-base max-w-md">
-                Access my complete professional resume with detailed information about my experience, skills, and
+                Access my professional resume with detailed information about my experience, skills, and
                 qualifications
               </p>
               <Button

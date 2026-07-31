@@ -98,11 +98,14 @@ export default function ResumePreview() {
                   </h3>
 
                   <p className="text-muted-foreground text-xs sm:text-sm lg:text-base mb-3 sm:mb-4 flex-grow leading-relaxed line-clamp-3">
-                    Certified in Data Privacy, Scrum methodologies, and Game Development from Pamantasan ng Lungsod ng
+                    Certified in Digital Creation, Data Privacy, Scrum 101, and Game Development from Pamantasan ng Lungsod ng
                     Valenzuela.
                   </p>
 
                   <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+                    <span className="px-2 sm:px-3 py-1 bg-accent/20 text-accent rounded-full text-xs font-medium border border-accent/30">
+                      Digital Creator
+                    </span>
                     <span className="px-2 sm:px-3 py-1 bg-accent/20 text-accent rounded-full text-xs font-medium border border-accent/30">
                       Data Privacy
                     </span>
