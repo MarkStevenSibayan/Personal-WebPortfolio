@@ -192,7 +192,7 @@ export default function Resume() {
             <div className="text-center space-y-3 sm:space-y-4">
               <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground">View My Resume</h3>
               <p className="text-muted-foreground text-xs sm:text-sm lg:text-base max-w-md">
-                Access my complete professional resume with detailed information about my experience, skills, and
+                Access my professional resume with detailed information about my experience, skills, and
                 qualifications
               </p>
               <Button
