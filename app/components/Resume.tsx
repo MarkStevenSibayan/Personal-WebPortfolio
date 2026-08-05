@@ -82,6 +82,14 @@ export default function Resume() {
           certificateUrl: "https://drive.google.com/file/d/1q6Qfis8cfmuwNOEwTmLtyIXJcHJ8zBZc/view?usp=sharing",
         },
         {
+          title: "Back To Basics - Work Immersion Webinar",
+          place: "Pamantasan ng Lungsod ng Valenzuela",
+          date: "April 02, 2022",
+          description:
+            "for participating in the Webinar titled BACK TO BASICS in conjunction with the Work Immersion Webinar Series for Senior High School.",
+          certificateUrl: "https://drive.google.com/file/d/1Hvnz-Ilkpegva1osaSZDXZPulz2GFqby/view",
+        },
+        {
           title: "2nd Academic Excellence Award",
           place: "Pamantasan ng Lungsod ng Valenzuela",
           date: "March 11, 2021",
